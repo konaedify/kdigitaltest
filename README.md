@@ -115,8 +115,32 @@ vercel --prod # production deploy
 
 ---
 
+## ⚠️ Wire up the demo form (do this before launch)
+
+The Contact page form validates input, shows a success state, and saves every submission to the browser's `localStorage` (`kd_demo_requests`) as a backup. **Once you add a free access key, every submission is emailed to `kona@kdigital.ai`.**
+
+It uses **[Web3Forms](https://web3forms.com)** — no account or server needed:
+
+1. Go to **[web3forms.com](https://web3forms.com)** and enter **`kona@kdigital.ai`** as the email to receive submissions.
+2. They instantly email you an **Access Key** (a long code).
+3. Open **`Contact.dc.html`**, find this line near the top of the `<script data-dc-script>` block:
+
+   ```js
+   ACCESS_KEY = 'YOUR_ACCESS_KEY';
+   ```
+
+4. Replace `YOUR_ACCESS_KEY` with the key from your email. (To send leads somewhere else later, register a new key with that address — the recipient is tied to the key.)
+5. Redeploy. Submit a test from the live site and confirm the email lands in `kona@kdigital.ai`.
+
+That's it — submissions now arrive in your inbox, with the `localStorage` copy as a safety net. If the request ever fails, it falls back to opening the visitor's email client addressed to `kona@kdigital.ai` so a lead is never lost.
+
+> Prefer Formspree or your own backend instead? Swap the `FORM_ENDPOINT` and the `body` of the `fetch` in `submit()` — the rest of the flow stays the same.
+
+---
+
 ## Before you go live (from SEO-Report.md)
 
+- **Wire the demo form** (above) and confirm a test lead is delivered end to end.
 - Confirm the production domain is `https://www.kdigital.ai` — if it changes, update the URLs in `robots.txt`, `sitemap.xml`, and the `canonical`/`og:url` tags.
 - Verify the site in **Google Search Console** + **Bing Webmaster Tools** and submit `sitemap.xml`.
 - Add **GA4** (or a privacy-first analytics tag) — paste the snippet into each page's `<helmet>`.

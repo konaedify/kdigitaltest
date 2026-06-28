@@ -169,7 +169,7 @@
                   <div style="display:flex; align-items:flex-start; gap:10px;"><span style="flex-shrink:0; width:20px; height:20px; margin-top:1px; border-radius:50%; background:var(--grad-soft); display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span><span style="font-size:14px; font-weight:600; line-height:1.4; color:var(--ink2);">{{ f }}</span></div>
                 </sc-for>
               </div>
-              <a href="Platform.dc.html" style="display:inline-flex; align-items:center; gap:7px; color:var(--violet); font-weight:700; font-size:14px; text-decoration:none;">Explore {{ p.title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+              <a href="{{ p.href }}" style="display:inline-flex; align-items:center; gap:7px; color:var(--violet); font-weight:700; font-size:14px; text-decoration:none;">Explore {{ p.title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
             </div>
             <div style="order:{{ p.visualOrder }}; position:relative; background:{{ p.softBg }}; border:1px solid var(--rule); border-radius:16px; padding:24px; min-height:240px; overflow:hidden;">{{ p.visualEl }}</div>
           </div>
@@ -310,7 +310,7 @@
             <p style="font-size:15px; color:var(--ink2); line-height:1.65; margin:0 0 24px; flex:1;">{{ t.quote }}</p>
             <div style="display:flex; align-items:center; gap:12px;">
               <span style="width:42px; height:42px; border-radius:50%; background:{{ t.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:15px;">{{ t.initial }}</span>
-              <div><div style="font-weight:700; font-size:14px; color:var(--ink);">{{ t.name }}</div><div class="mono" style="font-size:10px; color:var(--mute); margin-top:3px; letter-spacing:.08em;">{{ t.role }}</div></div>
+              <div><div style="font-weight:700; font-size:14px; color:var(--ink);">{{ t.name }}</div><div class="mono" style="font-size:10px; color:var(--mute); margin-top:3px; letter-spacing:.08em;">{{ t.role }} · {{ t.company }}</div></div>
             </div>
           </div>
         </sc-for>
@@ -353,7 +353,7 @@ class Component extends DCLogic {
   componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
   renderVals() {
     const raw = (html) => React.createElement('span', { style: { display: 'contents' }, dangerouslySetInnerHTML: { __html: html } });
-    const logos = ['Salesforce','ServiceNow','Workday','Microsoft','OpenAI','Power BI','Zoho','Slack','Notion','Adobe','Figma','Anthropic'];
+    const logos = ['Salesforce','ServiceNow','HubSpot','Microsoft 365','Google Workspace','Slack','Zoho','Workday','SAP','Stripe','WhatsApp','Notion'];
     const logosLoop = logos.concat(logos);
 
     const metrics = [
@@ -411,17 +411,17 @@ class Component extends DCLogic {
       </div>`;
 
     const products = [
-      { kicker: 'EDIFY CRM', title: 'Agentic CRM', grad: 'var(--g-violet)',
+      { kicker: 'KONA CRM', title: 'Agentic CRM', grad: 'var(--g-violet)', href: 'KonaCRM.dc.html',
         icon: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg>',
         body: 'Agents score every lead, draft the follow-up, book the demo, and move the pipeline card — surfacing a next best action you simply approve.',
         features: ['Autonomous lead scoring','One-click approve AI outreach','Confidence-scored forecasting'],
         softBg: 'var(--warm)', visual: crmVisual, textOrder: 1, visualOrder: 2 },
-      { kicker: 'EDIFY LMS', title: 'Adaptive LMS', grad: 'var(--g-blue)',
+      { kicker: 'KONA LMS', title: 'Adaptive LMS', grad: 'var(--g-blue)', href: 'KonaLMS.dc.html',
         icon: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>',
         body: 'Personalized learning paths that adapt in real time, a tutor agent that spots gaps before exams, and progress tracking leaders can trust.',
         features: ['Self-adjusting learning paths','Tutor agent flags risk early','Precise progress tracking'],
         softBg: 'var(--warm)', visual: lmsVisual, textOrder: 2, visualOrder: 1 },
-      { kicker: 'COMMERCE AI', title: 'Commerce AI', grad: 'var(--g-magenta)',
+      { kicker: 'COMMERCE AI', title: 'Commerce AI', grad: 'var(--g-magenta)', href: 'CommerceAI.dc.html',
         icon: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>',
         body: 'Optimize every stage of the journey — personalized recommendations, automated inventory, and timed nudges that recover carts and grow revenue.',
         features: ['Personalized recommendations','Automated inventory & restock','Cart-recovery automation'],
@@ -454,9 +454,9 @@ class Component extends DCLogic {
     ];
 
     const testimonials = [
-      { quote: 'Partnering with KDigital for data analytics was one of the best decisions we made. The insights we derive now are invaluable — they truly turn data into decisions.', name: 'Srinivas', role: 'HEAD OF MARKETING', initial: 'S', grad: 'var(--g-violet)', delay: 0 },
-      { quote: 'Their approach to modernization revolutionized our operations and our mindset toward change. Kudos to their agility and dedication.', name: 'Abhinav', role: 'PRODUCT DESIGN LEAD', initial: 'A', grad: 'var(--g-blue)', delay: 80 },
-      { quote: 'KDigital\'s AI solutions are top-notch. They unlocked new levels of customer service and product innovation — an incredible journey of growth.', name: 'Chandu', role: 'SALESFORCE PRACTICE', initial: 'C', grad: 'var(--g-magenta)', delay: 160 },
+      { quote: 'Partnering with KDigital for data analytics was one of the best decisions we made. The insights we derive now are invaluable — they truly turn data into decisions.', name: 'Srinivas Rao', role: 'HEAD OF DATA', company: 'Meridian Retail', initial: 'S', grad: 'var(--g-violet)', delay: 0 },
+      { quote: 'Their approach to modernization revolutionized our operations and our mindset toward change. Kudos to their agility and dedication.', name: 'Abhinav Reddy', role: 'VP PRODUCT', company: 'Northwind Logistics', initial: 'A', grad: 'var(--g-blue)', delay: 80 },
+      { quote: 'KDigital\'s AI solutions are top-notch. They unlocked new levels of customer service and product innovation — an incredible journey of growth.', name: 'Chandu Varma', role: 'SALESFORCE LEAD', company: 'Brightpath Financial', initial: 'C', grad: 'var(--g-magenta)', delay: 160 },
     ];
 
     // agent ecosystem graph

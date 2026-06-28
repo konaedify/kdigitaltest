@@ -21,6 +21,11 @@
   <url><loc>https://www.kdigital.ai/services/marketing</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.kdigital.ai/resources</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.kdigital.ai/resources/customer-stories</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.kdigital.ai/resources/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.kdigital.ai/resources/blog/agentic-crm-vs-rules</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.kdigital.ai/resources/blog/no-show-window</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.kdigital.ai/resources/blog/staffing-ai-team</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.kdigital.ai/resources/blog/workflows-to-automate-first</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.kdigital.ai/company</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.kdigital.ai/contact</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
   <url><loc>https://www.kdigital.ai/privacy</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>

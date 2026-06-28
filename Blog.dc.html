@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Blog — Playbooks & field notes | KDigital</title>
+  <meta name="description" content="Playbooks, case studies, and field notes from the team building and running production AI agents at KDigital.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0A14">
+  <link rel="canonical" href="https://www.kdigital.ai/resources/blog">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KDigital">
+  <meta property="og:title" content="Blog — Playbooks & field notes | KDigital">
+  <meta property="og:description" content="Playbooks, case studies, and field notes from the team building and running production AI agents at KDigital.">
+  <meta property="og:url" content="https://www.kdigital.ai/resources/blog">
+  <meta property="og:image" content="https://www.kdigital.ai/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.kdigital.ai/og-image.png">
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-40px,20px) scale(1.1); } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+    @supports (animation-timeline: view()) { [data-reveal] { animation:revealKf .8s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 58%; } }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden;">
+
+  <!-- HERO -->
+  <section style="position:relative; padding:150px 32px 50px; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.045) 1px, transparent 1px); background-size:24px 24px; -webkit-mask-image:radial-gradient(ellipse at 50% 30%, #000 34%, transparent 78%); mask-image:radial-gradient(ellipse at 50% 30%, #000 34%, transparent 78%);"></div>
+    <div style="position:absolute; top:-130px; right:8%; width:460px; height:460px; border-radius:50%; background:radial-gradient(circle, rgba(107,31,184,.16), transparent 65%); filter:blur(60px); animation:auroraB 19s ease-in-out infinite;"></div>
+    <div style="position:relative; z-index:2; max-width:820px; margin:0 auto; text-align:center;">
+      <div data-reveal style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:18px;">
+        <a href="Resources.dc.html" class="mono" style="font-size:10.5px; color:var(--mute); letter-spacing:.1em; text-decoration:none;">RESOURCES</a>
+        <span class="mono" style="font-size:10.5px; color:var(--hint);">/</span>
+        <span class="mono" style="font-size:10.5px; color:var(--violet); letter-spacing:.1em;">BLOG</span>
+      </div>
+      <h1 data-reveal style="font-size:clamp(38px,5vw,56px); line-height:1.07; letter-spacing:-.015em; margin:0 0 22px;">Field notes from the <span class="serif-i grad-text">agentic frontier.</span></h1>
+      <p data-reveal style="font-size:18.5px; color:var(--ink2); line-height:1.6; max-width:560px; margin:0 auto;">Playbooks, case studies, and hard-won lessons from putting AI agents into real businesses.</p>
+    </div>
+  </section>
+
+  <!-- FEATURED -->
+  <section style="padding:30px 32px 40px;">
+    <a href="{{ featured.href }}" data-reveal style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:0; background:var(--paper); border:1px solid var(--rule); border-radius:24px; overflow:hidden; box-shadow:var(--sh-card); text-decoration:none; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+      <div style="position:relative; min-height:300px; background:{{ featured.grad }}; overflow:hidden;">
+        <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.2) 1px, transparent 1px); background-size:20px 20px;"></div>
+        <span style="position:absolute; top:22px; left:22px; font-family:var(--font-mono); font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.24); border:1px solid rgba(255,255,255,.28); padding:6px 13px; border-radius:99px;">{{ featured.tag }}</span>
+        <span class="serif" style="position:absolute; left:26px; bottom:24px; font-size:30px; color:#fff; font-style:italic; opacity:.92;">Featured</span>
+      </div>
+      <div style="padding:44px; display:flex; flex-direction:column; justify-content:center;">
+        <h2 style="font-family:var(--font-ui); font-weight:700; font-size:28px; line-height:1.2; letter-spacing:-.01em; margin:0 0 14px; color:var(--ink);">{{ featured.title }}</h2>
+        <p style="font-size:15px; color:var(--ink2); line-height:1.6; margin:0 0 22px;">{{ featured.excerpt }}</p>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="width:38px; height:38px; border-radius:50%; background:{{ featured.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:14px;">{{ featured.authorInitial }}</span>
+          <div><div style="font-family:var(--font-ui); font-weight:700; font-size:13px; color:var(--ink);">{{ featured.author }}</div><div class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.06em; margin-top:2px;">{{ featured.meta }}</div></div>
+        </div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ALL POSTS -->
+  <section style="padding:30px 32px 90px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal style="margin-bottom:28px;"><span class="eyebrow">All posts</span></div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <sc-for list="{{ posts }}" as="p" hint-placeholder-count="3">
+          <a href="{{ p.href }}" data-reveal style="display:flex; flex-direction:column; background:var(--paper); border:1px solid var(--rule); border-radius:18px; overflow:hidden; text-decoration:none; box-shadow:var(--sh-card); transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+            <div style="position:relative; height:152px; background:{{ p.grad }}; overflow:hidden;">
+              <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.22) 1px, transparent 1px); background-size:18px 18px;"></div>
+              <span style="position:absolute; top:14px; left:14px; font-family:var(--font-mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.22); border:1px solid rgba(255,255,255,.25); padding:5px 11px; border-radius:99px;">{{ p.tag }}</span>
+            </div>
+            <div style="padding:24px; display:flex; flex-direction:column; flex:1;">
+              <h3 style="font-family:var(--font-ui); font-weight:700; font-size:17px; line-height:1.35; margin:0 0 10px; color:var(--ink);">{{ p.title }}</h3>
+              <p style="font-size:13px; color:var(--ink2); line-height:1.55; margin:0 0 18px; flex:1;">{{ p.excerpt }}</p>
+              <div class="mono" style="font-size:10px; color:var(--mute); letter-spacing:.08em;">{{ p.meta }}</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section style="background:var(--paper); border-top:1px solid var(--rule); padding:80px 32px;">
+    <div data-reveal style="max-width:920px; margin:0 auto; background:var(--warm); border:1px solid var(--rule); border-radius:22px; padding:48px; display:flex; align-items:center; justify-content:space-between; gap:36px; flex-wrap:wrap;">
+      <div style="max-width:440px;">
+        <span class="eyebrow">Stay in the loop</span>
+        <h2 class="serif" style="font-size:30px; margin:14px 0 10px; line-height:1.1;">The agentic playbook, monthly.</h2>
+        <p style="font-size:14px; color:var(--ink2); line-height:1.6; margin:0;">One email a month \u2014 what\u2019s working, what\u2019s new, and how teams are shipping agents. No noise.</p>
+      </div>
+      <div style="display:flex; gap:10px; flex:1; min-width:280px;">
+        <input placeholder="you@company.com" style="flex:1; box-sizing:border-box; font-family:var(--font-ui); font-size:14px; color:var(--ink); background:var(--paper); border:1px solid var(--rule); border-radius:11px; padding:13px 15px; outline:none;">
+        <a href="Contact.dc.html" style="display:inline-flex; align-items:center; background:var(--grad); color:#fff; font-weight:700; font-size:14px; padding:13px 22px; border-radius:11px; text-decoration:none; box-shadow:var(--sh-brand); white-space:nowrap;">Subscribe</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="resources" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const G = { violet: 'var(--g-violet)', magenta: 'var(--g-magenta)', blue: 'var(--g-blue)', ochre: 'var(--g-ochre)' };
+    const posts = [
+      { slug: 'agentic-crm-vs-rules', tag: 'Playbook', grad: G.violet, author: 'Manikanta R', authorInitial: 'M', meta: '8 MIN READ \u00b7 JUN 2026',
+        title: 'Why agentic CRM beats automation rules', excerpt: 'Rules break the moment reality gets messy. Here\u2019s how reasoning agents handle the edge cases automations can\u2019t \u2014 and keep a human in the loop.' },
+      { slug: 'no-show-window', tag: 'Case study', grad: G.magenta, author: 'Priya Nair', authorInitial: 'P', meta: '6 MIN READ \u00b7 MAY 2026',
+        title: 'The 48-hour window: turning no-shows into enrolments', excerpt: 'How a re-engagement agent recovered a third of missed demos \u2014 and what made the timing work.' },
+      { slug: 'staffing-ai-team', tag: 'Guide', grad: G.blue, author: 'Kiran Kumar', authorInitial: 'K', meta: '5 MIN READ \u00b7 MAY 2026',
+        title: 'Staffing an AI & data team without the 6-month hire', excerpt: 'The roles that matter first, how to vet them, and when to augment versus build a dedicated pod.' },
+      { slug: 'workflows-to-automate-first', tag: 'Playbook', grad: G.ochre, author: 'Manikanta R', authorInitial: 'M', meta: '7 MIN READ \u00b7 APR 2026',
+        title: 'Five workflows every team should automate first', excerpt: 'Start where the pain is sharp and the payback is fast. Five workflows that show up in almost every business.' },
+    ].map(p => ({ ...p, href: 'Article.dc.html?slug=' + p.slug }));
+
+    const featured = posts[0];
+    return { featured, posts };
+  }
+}
+</script>
+</body>
+</html>

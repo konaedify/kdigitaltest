@@ -24,6 +24,8 @@
     { "source": "/services/marketing", "destination": "/Marketing.dc.html" },
     { "source": "/resources", "destination": "/Resources.dc.html" },
     { "source": "/resources/customer-stories", "destination": "/CustomerStories.dc.html" },
+    { "source": "/resources/blog", "destination": "/Blog.dc.html" },
+    { "source": "/resources/blog/:slug", "destination": "/Article.dc.html?slug=:slug" },
     { "source": "/company", "destination": "/Company.dc.html" },
     { "source": "/contact", "destination": "/Contact.dc.html" },
     { "source": "/privacy", "destination": "/Privacy.dc.html" },

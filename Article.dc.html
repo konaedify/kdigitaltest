@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Blog | KDigital</title>
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-40px,20px) scale(1.1); } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(24px); } to { opacity:1; transform:none; } }
+    @supports (animation-timeline: view()) { [data-reveal] { animation:revealKf .8s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 56%; } }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden;">
+
+  <article>
+  <header style="position:relative; padding:144px 32px 50px; overflow:hidden; border-bottom:1px solid var(--rule);">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.045) 1px, transparent 1px); background-size:24px 24px; -webkit-mask-image:radial-gradient(ellipse at 50% 30%, #000 32%, transparent 76%); mask-image:radial-gradient(ellipse at 50% 30%, #000 32%, transparent 76%);"></div>
+    <div style="position:absolute; top:-140px; right:6%; width:460px; height:460px; border-radius:50%; background:{{ a.glow }}; filter:blur(60px); animation:auroraB 20s ease-in-out infinite;"></div>
+    <div style="position:relative; z-index:2; max-width:760px; margin:0 auto;">
+      <div data-reveal style="display:flex; align-items:center; gap:10px; margin-bottom:22px;">
+        <a href="Resources.dc.html" class="mono" style="font-size:10.5px; color:var(--mute); letter-spacing:.1em; text-decoration:none;">RESOURCES</a>
+        <span class="mono" style="font-size:10.5px; color:var(--hint);">/</span>
+        <a href="Blog.dc.html" class="mono" style="font-size:10.5px; color:var(--mute); letter-spacing:.1em; text-decoration:none;">BLOG</a>
+        <span class="mono" style="font-size:10.5px; color:var(--hint);">/</span>
+        <span class="mono" style="font-size:10.5px; color:var(--violet); letter-spacing:.1em;">{{ a.tag }}</span>
+      </div>
+      <h1 data-reveal style="font-size:clamp(34px,4.4vw,50px); line-height:1.1; letter-spacing:-.015em; margin:0 0 24px;">{{ a.titleA }}<span class="serif-i grad-text">{{ a.titleB }}</span></h1>
+      <div data-reveal style="display:flex; align-items:center; gap:14px;">
+        <span style="width:42px; height:42px; border-radius:50%; background:{{ a.authorGrad }}; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:15px;">{{ a.authorInitial }}</span>
+        <div>
+          <div style="font-family:var(--font-ui); font-weight:700; font-size:14px; color:var(--ink);">{{ a.author }}</div>
+          <div class="mono" style="font-size:10px; color:var(--mute); letter-spacing:.06em; margin-top:3px;">{{ a.meta }}</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding:56px 32px 30px;">
+    <div data-reveal style="max-width:720px; margin:0 auto;">
+      <p style="font-size:20px; line-height:1.6; color:var(--ink); font-weight:500; margin:0 0 32px;">{{ a.lede }}</p>
+      <div>
+        <sc-for list="{{ a.blocks }}" as="b" hint-placeholder-count="8">
+          <div>{{ b.el }}</div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:20px 32px 70px;">
+    <div data-reveal style="max-width:720px; margin:0 auto; padding:28px; background:var(--paper); border:1px solid var(--rule); border-radius:18px; display:flex; align-items:center; gap:18px; flex-wrap:wrap;">
+      <span style="width:52px; height:52px; border-radius:50%; background:{{ a.authorGrad }}; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:18px; flex-shrink:0;">{{ a.authorInitial }}</span>
+      <div style="flex:1; min-width:220px;">
+        <div style="font-family:var(--font-ui); font-weight:700; font-size:15px; color:var(--ink);">{{ a.author }}</div>
+        <div style="font-size:13px; color:var(--ink2); line-height:1.5; margin-top:4px;">{{ a.authorBio }}</div>
+      </div>
+      <a href="Contact.dc.html" style="display:inline-flex; align-items:center; gap:7px; background:var(--ink); color:#fff; font-weight:700; font-size:13.5px; padding:11px 20px; border-radius:99px; text-decoration:none; white-space:nowrap;">Book a demo <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </section>
+  </article>
+
+  <section style="background:var(--paper); border-top:1px solid var(--rule); padding:80px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:36px;">
+        <h2 class="serif" style="font-size:30px; margin:0; line-height:1.1;">Keep reading.</h2>
+        <a href="Blog.dc.html" style="color:var(--violet); font-weight:700; font-size:14px; text-decoration:none; white-space:nowrap;">All posts →</a>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
+          <a href="{{ r.href }}" data-reveal style="display:flex; flex-direction:column; background:var(--warm); border:1px solid var(--rule); border-radius:18px; overflow:hidden; text-decoration:none; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+            <div style="position:relative; height:120px; background:{{ r.grad }}; overflow:hidden;">
+              <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.22) 1px, transparent 1px); background-size:18px 18px;"></div>
+              <span style="position:absolute; top:13px; left:13px; font-family:var(--font-mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.22); border:1px solid rgba(255,255,255,.25); padding:5px 10px; border-radius:99px;">{{ r.tag }}</span>
+            </div>
+            <div style="padding:22px; display:flex; flex-direction:column; flex:1;">
+              <h3 style="font-family:var(--font-ui); font-weight:700; font-size:16px; line-height:1.35; margin:0 0 10px; color:var(--ink);">{{ r.title }}</h3>
+              <div class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.08em; margin-top:auto;">{{ r.meta }}</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="resources" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const R = React.createElement;
+    const P = (t) => R('p', { style: { fontSize: '17px', lineHeight: 1.8, color: 'var(--ink2)', margin: '0 0 22px' } }, t);
+    const H2 = (t) => R('h2', { style: { fontFamily: 'var(--font-ui)', fontWeight: 700, fontSize: '25px', letterSpacing: '-.01em', color: 'var(--ink)', margin: '40px 0 14px', lineHeight: 1.2 } }, t);
+    const QUOTE = (t) => R('blockquote', { style: { margin: '30px 0', paddingLeft: '24px', borderLeft: '3px solid', borderImage: 'linear-gradient(180deg,#1F3FCF,#6B1FB8,#C7197A) 1', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '25px', lineHeight: 1.4, color: 'var(--ink)' } }, t);
+    const LIST = (items) => R('ul', { style: { margin: '0 0 24px', paddingLeft: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '12px' } },
+      items.map((it, i) => R('li', { key: i, style: { display: 'flex', alignItems: 'flex-start', gap: '12px', fontSize: '16.5px', lineHeight: 1.65, color: 'var(--ink2)' } },
+        R('span', { style: { flexShrink: 0, width: '22px', height: '22px', marginTop: '2px', borderRadius: '50%', background: 'var(--grad-soft)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--violet)', fontFamily: 'var(--font-mono)', fontSize: '10px', fontWeight: 700 } }, i + 1),
+        R('span', null, it))));
+    const CALLOUT = (t) => R('div', { style: { margin: '30px 0', padding: '22px 24px', background: 'var(--grad-soft)', border: '1px solid rgba(107,31,184,.18)', borderRadius: '14px', fontSize: '15.5px', lineHeight: 1.65, color: 'var(--ink)' } },
+      R('span', { style: { display: 'block', fontFamily: 'var(--font-mono)', fontSize: '9.5px', letterSpacing: '.12em', color: 'var(--violet)', marginBottom: '8px' } }, 'THE TAKEAWAY'), t);
+    const mk = (b) => { const [k, v] = b; return k === 'h2' ? H2(v) : k === 'quote' ? QUOTE(v) : k === 'list' ? LIST(v) : k === 'callout' ? CALLOUT(v) : P(v); };
+
+    const G = { violet: 'var(--g-violet)', magenta: 'var(--g-magenta)', blue: 'var(--g-blue)', ochre: 'var(--g-ochre)' };
+    const glow = { violet: 'radial-gradient(circle, rgba(107,31,184,.16), transparent 65%)', magenta: 'radial-gradient(circle, rgba(199,25,122,.15), transparent 65%)', blue: 'radial-gradient(circle, rgba(31,63,207,.15), transparent 65%)', ochre: 'radial-gradient(circle, rgba(198,154,58,.16), transparent 65%)' };
+
+    const DB = {
+      'agentic-crm-vs-rules': {
+        tag: 'PLAYBOOK', color: 'violet',
+        titleA: 'Why agentic CRM beats ', titleB: 'automation rules.',
+        author: 'Manikanta R', authorInitial: 'M', authorGrad: G.violet, meta: '8 MIN READ \u00b7 JUN 2026',
+        authorBio: 'Writes about agentic systems and go-to-market at KDigital.',
+        lede: 'Automation rules promised to take the busywork off your team. Then reality showed up \u2014 the half-filled form, the lead who replies at 11pm, the deal that needs a human judgment call. Here\u2019s why reasoning agents handle what rules can\u2019t.',
+        blocks: [
+          ['p', 'Every CRM team eventually builds the same thing: a thicket of if-this-then-that rules. Score the lead if the form says "enterprise." Send email B if email A goes unopened for three days. Assign to the senior rep if the deal is over a threshold. It works \u2014 until it doesn\u2019t.'],
+          ['p', 'Rules are brittle because the real world is messy. A prospect fills in half a form. A lead\u2019s job title doesn\u2019t map to any of your categories. Someone replies to a sequence with a question your automation has no branch for. Each exception becomes another rule, and within a year you have a system nobody fully understands and everybody is afraid to touch.'],
+          ['h2', 'Rules encode decisions. Agents make them.'],
+          ['p', 'The difference is subtle but it changes everything. A rule is a decision you made in advance and froze in place. An agent is given a goal and the context to reach it \u2014 and it decides in the moment, the way a good rep would.'],
+          ['p', 'Ask a rule "is this lead hot?" and it checks whether a field equals a value. Ask an agent the same question and it weighs intent signals, recent behavior, fit with your best customers, and the things that don\u2019t fit neatly in a column \u2014 then it tells you why, with a confidence score you can challenge.'],
+          ['quote', '\u201CA rule fails silently on the case you didn\u2019t anticipate. An agent reasons about it \u2014 and shows its work.\u201D'],
+          ['h2', 'What this looks like in practice'],
+          ['p', 'In Kona CRM, the work that used to be a maze of rules becomes a small team of agents, each owning a job and surfacing a recommendation a human approves:'],
+          ['list', ['The Lead Scoring agent ranks every enquiry in real time \u2014 and re-ranks as new signals arrive, instead of scoring once at form-fill.', 'The Outreach agent drafts a reply in your voice, timed to when each lead actually engages, rather than firing on a fixed schedule.', 'The Scheduler agent books the demo and handles the back-and-forth, so a hot lead never waits for a human to be free.', 'The Forecast agent reads live pipeline signals and flags deals slipping \u2014 weeks before a rule based on "last activity date" would.']],
+          ['h2', 'You don\u2019t lose control \u2014 you gain leverage'],
+          ['p', 'The fear with autonomy is losing the wheel. The opposite happens. Because every agent explains its reasoning and asks for approval on anything that matters, you review decisions instead of building the logic behind them. Your team spends its judgment where judgment counts, and the agents absorb the volume that used to bury it.'],
+          ['callout', 'Rules don\u2019t scale with complexity \u2014 they multiply with it. Reasoning agents handle the edge cases natively, explain themselves, and keep a human in the loop where it matters. That\u2019s the shift from automation to agentic.'],
+          ['p', 'If your CRM is starting to feel like a rulebook only one person understands, that\u2019s the signal. The next step isn\u2019t another rule \u2014 it\u2019s an agent that can reason about the case the rule would have missed.'],
+        ],
+      },
+      'no-show-window': {
+        tag: 'CASE STUDY', color: 'magenta',
+        titleA: 'The 48-hour window: turning no-shows ', titleB: 'into enrolments.',
+        author: 'Priya Nair', authorInitial: 'P', authorGrad: G.magenta, meta: '6 MIN READ \u00b7 MAY 2026',
+        authorBio: 'Leads customer outcomes for Kona CRM at KDigital.',
+        lede: 'A missed demo isn\u2019t a lost lead \u2014 it\u2019s a lead with bad timing. One education team recovered a third of its no-shows by acting inside a narrow window most teams miss entirely.',
+        blocks: [
+          ['p', 'For most admissions teams, a no-show is where the story ends. The slot passes, the CRM marks it "no-show," and the lead drifts into a follow-up queue that someone gets to eventually \u2014 usually too late. The team we worked with was losing roughly four in ten booked demos this way.'],
+          ['h2', 'The signal hiding in the data'],
+          ['p', 'When we looked at their historical pipeline, one pattern was loud: leads re-engaged after a missed demo converted dramatically better when contact happened within 48 hours \u2014 and fell off a cliff after that. The intent was still there; it just had a short shelf life. The team knew this anecdotally. They just couldn\u2019t act on it at volume, because a human reaching every no-show within two days, with a personalized message, simply doesn\u2019t scale.'],
+          ['quote', '\u201CRe-engagement within 48 hours of a no-show converted 3.2\u00d7 better than the same outreach a week later.\u201D'],
+          ['h2', 'What the agent actually did'],
+          ['p', 'We gave the re-engagement work to an agent with a narrow, well-defined job. The moment a demo was marked no-show, it:'],
+          ['list', ['Pulled the lead\u2019s history \u2014 the program they\u2019d asked about, the questions they\u2019d raised, the channel they preferred.', 'Drafted a short, specific message referencing their actual interest, not a generic "sorry we missed you."', 'Timed the send for when that lead had historically opened email \u2014 often the same evening.', 'Offered two new slots and handed booking back to the Scheduler agent, with a human approving anything non-routine.']],
+          ['h2', 'The result'],
+          ['p', 'Inside the first month, the team recovered about a third of demos that would have been written off \u2014 worth an estimated \u20b96.2L in pipeline they\u2019d otherwise have lost. Just as importantly, counsellors stopped spending mornings on cold follow-up lists and spent them with applicants who were ready to talk.'],
+          ['callout', 'The lesson isn\u2019t "send faster." It\u2019s that timing windows like this exist all over your funnel \u2014 and agents are how you act on them at scale without burning out your team.'],
+          ['p', 'Every pipeline has its own version of the 48-hour window. The question is whether you can find it in your data \u2014 and whether you have something that can act the instant it opens.'],
+        ],
+      },
+      'staffing-ai-team': {
+        tag: 'GUIDE', color: 'blue',
+        titleA: 'Staffing an AI & data team ', titleB: 'without the 6-month hire.',
+        author: 'Kiran Kumar', authorInitial: 'K', authorGrad: G.blue, meta: '5 MIN READ \u00b7 MAY 2026',
+        authorBio: 'Heads talent and delivery for KDigital\u2019s staffing practice.',
+        lede: 'You don\u2019t need to hire a full AI team to ship your first agents. You need the right two or three roles, in the right order \u2014 and a way to start before a six-month search concludes.',
+        blocks: [
+          ['p', 'The most common reason AI projects stall isn\u2019t technology \u2014 it\u2019s people. Teams decide they need to "hire an AI team," post a wall of senior roles, and then wait two quarters while the work sits idle. There\u2019s a faster path, and it starts with being honest about which roles actually matter first.'],
+          ['h2', 'The roles that matter first'],
+          ['p', 'For a mid-market team putting its first agents into production, three roles carry most of the weight:'],
+          ['list', ['A solutions-minded engineer who can wire agents to your real systems \u2014 not a researcher, a builder who ships.', 'A data person who can get your data clean, accessible, and grounded, because agents are only as good as what they can see.', 'A product or domain owner who knows the workflow well enough to say what "good" looks like and where a human must stay in the loop.']],
+          ['p', 'Notice what\u2019s not on this list: a large team of specialists. You add those as the work proves itself, not before.'],
+          ['h2', 'Augment first, build second'],
+          ['p', 'The trap is treating your first hire as a permanent, full-time, perfect-fit search. That\u2019s how you lose two quarters. A better sequence is to augment with people who have already shipped this kind of work, prove the first use case, and use what you learn to write a far sharper job description than you could have written at the start.'],
+          ['quote', '\u201CThe best spec for your first AI hire is the one you write after your first agent is already in production.\u201D'],
+          ['h2', 'How to vet for real'],
+          ['p', 'Certifications tell you someone studied. They don\u2019t tell you someone has shipped. When you\u2019re evaluating talent \u2014 whether you augment or hire \u2014 ask for the messy parts: a project that went sideways and what they changed, how they grounded an agent in real data, how they decided where a human gate belonged. People who\u2019ve done the work answer these in specifics. People who haven\u2019t answer in theory.'],
+          ['callout', 'Start with three roles, augment to move now, and let your first shipped agent write the job description for your second hire. Momentum beats the perfect org chart.'],
+          ['p', 'The teams that win with AI aren\u2019t the ones that hired the biggest team. They\u2019re the ones that started \u2014 with the right few people, in the right order, before the search was "done."'],
+        ],
+      },
+      'workflows-to-automate-first': {
+        tag: 'PLAYBOOK', color: 'ochre',
+        titleA: 'Five workflows every team should ', titleB: 'automate first.',
+        author: 'Manikanta R', authorInitial: 'M', authorGrad: G.ochre, meta: '7 MIN READ \u00b7 APR 2026',
+        authorBio: 'Writes about agentic systems and go-to-market at KDigital.',
+        lede: 'You don\u2019t boil the ocean with agents \u2014 you start where the pain is sharp and the payback is fast. These five workflows show up in almost every mid-market business, and each one earns its keep quickly.',
+        blocks: [
+          ['p', 'The fastest way to lose faith in automation is to aim it at something vague. The fastest way to build belief is to point it at a job everyone agrees is tedious, measurable, and constant. Here are five that fit \u2014 roughly in the order most teams should tackle them.'],
+          ['h2', '1. Lead-to-demo follow-up'],
+          ['p', 'The highest-leverage workflow in most businesses. Score inbound leads, draft a tailored follow-up, and book the meeting \u2014 before a competitor responds. Speed is the whole game here, and it\u2019s exactly what agents are good at.'],
+          ['h2', '2. Ticket triage and resolution'],
+          ['p', 'Support queues are full of requests that are routine until they aren\u2019t. An agent can classify each ticket, draft a grounded reply, and resolve or escalate with full context \u2014 cutting response time without losing the human touch on the hard ones.'],
+          ['h2', '3. Invoice and document processing'],
+          ['p', 'Extracting line items, validating them against a record, and posting the result is pure, error-prone busywork. It\u2019s also highly structured \u2014 which makes it an ideal early win with a payback you can put a number on.'],
+          ['h2', '4. Cart and pipeline recovery'],
+          ['p', 'Abandoned carts and stalled deals are revenue you\u2019ve already half-earned. An agent that detects the drop-off, personalizes the win-back, and sends it on the right channel recovers money that would otherwise quietly leak away.'],
+          ['h2', '5. Reporting and follow-up nudges'],
+          ['p', 'The weekly status pull, the "did anyone follow up?" check, the reminder that should have gone out \u2014 small, constant, and perfect for an agent that never forgets and never sleeps.'],
+          ['quote', '\u201CStart where the work is tedious, measurable, and constant. Belief compounds from there.\u201D'],
+          ['callout', 'Pick one of these, instrument it so you can see the lift, and ship it before touching the next. Five quick wins build more momentum than one ambitious project that takes a year.'],
+          ['p', 'None of these require reinventing your business. They require pointing the right agent at the right repetitive job \u2014 and letting the result make the case for the next one.'],
+        ],
+      },
+    };
+
+    const order = ['agentic-crm-vs-rules', 'no-show-window', 'staffing-ai-team', 'workflows-to-automate-first'];
+    let slug = 'agentic-crm-vs-rules';
+    try { const q = new URLSearchParams(window.location.search).get('slug'); if (q && DB[q]) slug = q; } catch (e) {}
+    const d = DB[slug];
+
+    const a = { ...d, glow: glow[d.color], blocks: d.blocks.map((b, i) => ({ el: mk(b) })) };
+    const related = order.filter(s => s !== slug).slice(0, 3).map(s => ({
+      href: 'Article.dc.html?slug=' + s, tag: DB[s].tag, grad: G[DB[s].color],
+      title: (DB[s].titleA + DB[s].titleB).trim(), meta: DB[s].meta,
+    }));
+
+    return { a, related };
+  }
+}
+</script>
+</body>
+</html>

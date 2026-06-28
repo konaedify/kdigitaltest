@@ -55,7 +55,7 @@
   <section style="padding:30px 32px 80px;">
     <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
       <sc-for list="{{ types }}" as="t" hint-placeholder-count="3">
-        <a href="#" data-reveal style="position:relative; display:block; background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:32px; text-decoration:none; overflow:hidden; box-shadow:var(--sh-card); transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+        <a href="{{ t.href }}" data-reveal style="position:relative; display:block; background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:32px; text-decoration:none; overflow:hidden; box-shadow:var(--sh-card); transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
           <span style="width:48px; height:48px; border-radius:13px; background:{{ t.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:20px;">{{ t.iconEl }}</span>
           <h3 style="font-family:var(--font-ui); font-weight:700; font-size:20px; margin:0 0 8px; color:var(--ink);">{{ t.title }}</h3>
           <p style="font-size:13.5px; color:var(--ink2); line-height:1.55; margin:0 0 18px;">{{ t.body }}</p>
@@ -70,11 +70,11 @@
     <div style="max-width:1160px; margin:0 auto;">
       <div data-reveal style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:44px;">
         <div><span class="eyebrow">From the blog</span><h2 class="serif" style="font-size:36px; margin:16px 0 0; line-height:1.1;">Latest reading.</h2></div>
-        <a href="#" style="color:var(--violet); font-weight:700; font-size:14px; text-decoration:none; white-space:nowrap;">View all posts →</a>
+        <a href="Blog.dc.html" style="color:var(--violet); font-weight:700; font-size:14px; text-decoration:none; white-space:nowrap;">View all posts →</a>
       </div>
       <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
         <sc-for list="{{ articles }}" as="a" hint-placeholder-count="3">
-          <a href="#" data-reveal style="display:flex; flex-direction:column; background:var(--warm); border:1px solid var(--rule); border-radius:18px; overflow:hidden; text-decoration:none; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+          <a href="{{ a.href }}" data-reveal style="display:flex; flex-direction:column; background:var(--warm); border:1px solid var(--rule); border-radius:18px; overflow:hidden; text-decoration:none; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
             <div style="position:relative; height:148px; background:{{ a.grad }}; overflow:hidden;">
               <div style="position:absolute; inset:0; background-image:radial-gradient(rgba(255,255,255,.22) 1px, transparent 1px); background-size:18px 18px;"></div>
               <span style="position:absolute; top:14px; left:14px; font-family:var(--font-mono); font-size:9.5px; letter-spacing:.12em; text-transform:uppercase; color:#fff; background:rgba(0,0,0,.22); border:1px solid rgba(255,255,255,.25); padding:5px 11px; border-radius:99px;">{{ a.tag }}</span>
@@ -116,24 +116,24 @@ class Component extends DCLogic {
     const ic = (p) => `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
 
     const types = [
-      { title: 'Blog', grad: 'var(--g-violet)', link: 'Read the blog',
+      { title: 'Blog', grad: 'var(--g-violet)', link: 'Read the blog', href: 'Blog.dc.html',
         body: 'Playbooks, deep-dives, and field notes from the team building and running production agents.',
         icon: ic('<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>') },
-      { title: 'Customer stories', grad: 'var(--g-magenta)', link: 'See the work',
+      { title: 'Customer stories', grad: 'var(--g-magenta)', link: 'See the work', href: 'CustomerStories.dc.html',
         body: 'How mid-market teams across education, retail, and finance put agents to work — and the lift they saw.',
         icon: ic('<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle>') },
-      { title: 'Documentation', grad: 'var(--g-blue)', link: 'Browse the docs',
+      { title: 'Documentation', grad: 'var(--g-blue)', link: 'Browse the docs', href: 'Platform.dc.html',
         body: 'Product guides, APIs, and integration references for Kona CRM, LMS, Commerce, and Agent OS.',
         icon: ic('<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"></path>') },
     ];
     types.forEach(t => t.iconEl = raw(t.icon));
 
     const articles = [
-      { tag: 'Playbook', grad: 'var(--g-violet)', title: 'Why agentic CRM beats automation rules', meta: '8 MIN READ · JUN 2026',
+      { tag: 'Playbook', grad: 'var(--g-violet)', title: 'Why agentic CRM beats automation rules', meta: '8 MIN READ · JUN 2026', href: 'Article.dc.html?slug=agentic-crm-vs-rules',
         excerpt: 'Rules break the moment reality gets messy. Here\'s how reasoning agents handle the edge cases that automations can\'t.' },
-      { tag: 'Case study', grad: 'var(--g-magenta)', title: 'The 48-hour window: turning no-shows into enrolments', meta: '6 MIN READ · MAY 2026',
+      { tag: 'Case study', grad: 'var(--g-magenta)', title: 'The 48-hour window: turning no-shows into enrolments', meta: '6 MIN READ · MAY 2026', href: 'Article.dc.html?slug=no-show-window',
         excerpt: 'A look at how a re-engagement agent recovered a third of missed demos — and what made the timing work.' },
-      { tag: 'Guide', grad: 'var(--g-blue)', title: 'Staffing an AI & data team without the 6-month hire', meta: '5 MIN READ · MAY 2026',
+      { tag: 'Guide', grad: 'var(--g-blue)', title: 'Staffing an AI & data team without the 6-month hire', meta: '5 MIN READ · MAY 2026', href: 'Article.dc.html?slug=staffing-ai-team',
         excerpt: 'The roles that matter first, how to vet them, and when to augment versus build a dedicated pod.' },
     ];
 

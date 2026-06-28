@@ -78,19 +78,19 @@
         </div>
       </sc-if>
       <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
-        <div>
+        <form onSubmit="{{ onSubmit }}">
           <h2 style="font-family:var(--font-ui); font-weight:700; font-size:22px; margin:0 0 4px; color:var(--ink);">Book your demo</h2>
           <p style="font-size:13.5px; color:var(--mute); margin:0 0 24px;">No commitment. Just a clear look at the ROI.</p>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
-            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">FULL NAME *</label><input class="ce-input" placeholder="Manikanta R." value="{{ form.name }}" onInput="{{ onName }}"></div>
-            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">COMPANY *</label><input class="ce-input" placeholder="Acme Pvt Ltd" value="{{ form.company }}" onInput="{{ onCompany }}"></div>
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">FULL NAME *</label><input class="ce-input" name="name" autocomplete="name" required="{{ true }}" placeholder="Manikanta R." value="{{ form.name }}" onInput="{{ onName }}"></div>
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">COMPANY *</label><input class="ce-input" name="company" autocomplete="organization" required="{{ true }}" placeholder="Acme Pvt Ltd" value="{{ form.company }}" onInput="{{ onCompany }}"></div>
           </div>
           <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
-            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">EMAIL *</label><input class="ce-input" type="email" placeholder="you@company.com" value="{{ form.email }}" onInput="{{ onEmail }}"></div>
-            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">PHONE *</label><input class="ce-input" placeholder="+91 ..." value="{{ form.phone }}" onInput="{{ onPhone }}"></div>
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">EMAIL *</label><input class="ce-input" name="email" type="email" autocomplete="email" required="{{ true }}" placeholder="you@company.com" value="{{ form.email }}" onInput="{{ onEmail }}"></div>
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">PHONE *</label><input class="ce-input" name="phone" type="tel" autocomplete="tel" required="{{ true }}" placeholder="+91 ..." value="{{ form.phone }}" onInput="{{ onPhone }}"></div>
           </div>
           <div style="margin-bottom:14px;"><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">INTERESTED IN</label>
-            <select class="ce-input" value="{{ form.service }}" onChange="{{ onService }}">
+            <select class="ce-input" name="service" value="{{ form.service }}" onChange="{{ onService }}">
               <option value="Agentic CRM">Agentic CRM</option>
               <option value="Adaptive LMS">Adaptive LMS</option>
               <option value="Commerce AI">Commerce AI</option>
@@ -100,13 +100,16 @@
               <option value="Not sure yet">Not sure yet — help me decide</option>
             </select>
           </div>
-          <div style="margin-bottom:20px;"><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">WHAT WOULD YOU AUTOMATE FIRST?</label><textarea class="ce-input" rows="3" placeholder="e.g. follow-ups for inbound leads..." style="resize:vertical;" value="{{ form.message }}" onInput="{{ onMessage }}"></textarea></div>
+          <div style="margin-bottom:20px;"><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">WHAT WOULD YOU AUTOMATE FIRST?</label><textarea class="ce-input" name="message" rows="3" placeholder="e.g. follow-ups for inbound leads..." style="resize:vertical;" value="{{ form.message }}" onInput="{{ onMessage }}"></textarea></div>
           <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
             <div style="font-size:12.5px; color:var(--warn); margin-bottom:14px; font-weight:500;">Please fill in your name, company, email and phone.</div>
           </sc-if>
-          <button onClick="{{ onSubmit }}" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:9px; background:var(--grad); color:#fff; font-family:var(--font-ui); font-weight:700; font-size:15px; padding:15px; border:none; border-radius:99px; cursor:pointer; box-shadow:var(--sh-brand); transition:transform .15s var(--ease);" style-hover="transform:translateY(-1px);">Request my demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+          <sc-if value="{{ sendFailed }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:12.5px; color:var(--warn); margin-bottom:14px; font-weight:500;">Something went wrong sending your request. Please email hello@kdigital.ai or call +91 8977 736 843 and we’ll set it up.</div>
+          </sc-if>
+          <button type="submit" disabled="{{ sending }}" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:9px; background:var(--grad); color:#fff; font-family:var(--font-ui); font-weight:700; font-size:15px; padding:15px; border:none; border-radius:99px; cursor:pointer; box-shadow:var(--sh-brand); transition:transform .15s var(--ease);" style-hover="transform:translateY(-1px);">{{ submitLabel }} <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
           <p style="font-size:11.5px; color:var(--hint); text-align:center; margin:14px 0 0;">By submitting you agree to be contacted about KDigital products.</p>
-        </div>
+        </form>
       </sc-if>
     </div>
   </section>
@@ -117,15 +120,64 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1120,&quot;height&quot;:900}}">
 class Component extends DCLogic {
-  state = { form: { name: '', company: '', email: '', phone: '', service: 'Agentic CRM', message: '' }, submitted: false, showError: false };
+  // ── Lead delivery — emails every submission to LEAD_EMAIL via Web3Forms ──
+  // SETUP (2 min, free):
+  //   1. Go to https://web3forms.com and enter  kona@kdigital.ai
+  //   2. They email you an Access Key. Paste it as ACCESS_KEY below.
+  // Done — submissions now arrive at kona@kdigital.ai. Each one is also
+  // saved to localStorage ('kd_demo_requests') as a backup, and if the
+  // network request ever fails it falls back to the visitor's email app.
+  ACCESS_KEY = 'YOUR_ACCESS_KEY';
+  FORM_ENDPOINT = 'https://api.web3forms.com/submit';
+  LEAD_EMAIL = 'kona@kdigital.ai';
+
+  state = { form: { name: '', company: '', email: '', phone: '', service: 'Agentic CRM', message: '' }, submitted: false, showError: false, sending: false, sendFailed: false };
   set(k, v) { this.setState(s => ({ form: { ...s.form, [k]: v } })); }
-  submit() {
+
+  persistLocal(f) {
+    try {
+      const key = 'kd_demo_requests';
+      const prev = JSON.parse(localStorage.getItem(key) || '[]');
+      prev.push({ ...f, at: new Date().toISOString() });
+      localStorage.setItem(key, JSON.stringify(prev));
+    } catch (e) {}
+  }
+  mailtoFallback(f) {
+    const lines = ['Name: ' + f.name, 'Company: ' + f.company, 'Email: ' + f.email, 'Phone: ' + f.phone, 'Interested in: ' + f.service, '', (f.message || '')];
+    const url = 'mailto:' + this.LEAD_EMAIL + '?subject=' + encodeURIComponent('Demo request — ' + f.company) + '&body=' + encodeURIComponent(lines.join('\n'));
+    try { window.location.href = url; } catch (e) {}
+  }
+  async submit() {
     const f = this.state.form;
     if (!f.name.trim() || !f.company.trim() || !f.email.trim() || !f.phone.trim()) {
       this.setState({ showError: true });
       return;
     }
-    this.setState({ submitted: true, showError: false });
+    this.setState({ showError: false, sending: true, sendFailed: false });
+    this.persistLocal(f);
+    const configured = this.ACCESS_KEY && !this.ACCESS_KEY.includes('YOUR_ACCESS_KEY');
+    if (!configured) {
+      this.mailtoFallback(f);
+      this.setState({ submitted: true, sending: false });
+      return;
+    }
+    try {
+      const res = await fetch(this.FORM_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: this.ACCESS_KEY,
+          subject: 'New demo request — ' + f.company,
+          from_name: 'KDigital website',
+          name: f.name, company: f.company, email: f.email, phone: f.phone,
+          service: f.service, message: f.message,
+        }),
+      });
+      if (!res.ok) throw new Error('bad status ' + res.status);
+      this.setState({ submitted: true, sending: false });
+    } catch (e) {
+      this.setState({ sending: false, sendFailed: true });
+    }
   }
   renderVals() {
     const raw = (html) => React.createElement('span', { style: { display: 'contents' }, dangerouslySetInnerHTML: { __html: html } });
@@ -142,6 +194,9 @@ class Component extends DCLogic {
       submitted: this.state.submitted,
       notSubmitted: !this.state.submitted,
       showError: this.state.showError,
+      sending: this.state.sending,
+      sendFailed: this.state.sendFailed,
+      submitLabel: this.state.sending ? 'Sending…' : 'Request my demo',
       nameOrThere: this.state.form.name.trim() ? this.state.form.name.trim().split(' ')[0] : 'there',
       onName: (e) => this.set('name', e.target.value),
       onCompany: (e) => this.set('company', e.target.value),
@@ -149,7 +204,7 @@ class Component extends DCLogic {
       onPhone: (e) => this.set('phone', e.target.value),
       onService: (e) => this.set('service', e.target.value),
       onMessage: (e) => this.set('message', e.target.value),
-      onSubmit: () => this.submit(),
+      onSubmit: (e) => { if (e && e.preventDefault) e.preventDefault(); this.submit(); },
     };
   }
 }
