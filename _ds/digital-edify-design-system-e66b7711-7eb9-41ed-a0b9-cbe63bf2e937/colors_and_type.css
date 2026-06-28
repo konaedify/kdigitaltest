@@ -1,0 +1,152 @@
+/* ============================================================
+   Digital Edify — Core Color & Type Tokens
+   Brand: Digital Edify (Edify Agent OS / Edify CRM family)
+   Fonts: Instrument Serif (display), Inter Tight (UI body),
+          JetBrains Mono (labels / metadata / numerals)
+   Load this file first; it defines :root vars + base type.
+   ============================================================ */
+
+/* ---- Web fonts (Google Fonts CDN, full charset) -------------
+   Local subset copies also live in /fonts for offline use.    */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ---------- INK / TEXT (foreground) ---------- */
+  --ink:    #0E0A14;   /* fg1 — primary text, dark shell, deep aubergine-black */
+  --ink2:   #3B2E4A;   /* fg2 — secondary text / body on light */
+  --mute:   #6B5E74;   /* fg3 — muted labels, captions */
+  --hint:   #A89DAC;   /* fg4 — hints, placeholders, faint mono labels */
+
+  /* ---------- SURFACES (warm paper) ---------- */
+  --paper:  #FFFFFF;   /* bg1 — cards, raised surfaces */
+  --canvas: #F4F0EA;   /* bg0 — app canvas / page background (warm linen) */
+  --warm:   #FBF7F1;   /* bg-warm — sidebar / soft panels */
+  --warm2:  #F0EAE1;   /* bg-warm2 — chips, wells, inset fills */
+
+  /* ---------- RULES / BORDERS ---------- */
+  --rule:   #E6DFD5;   /* hairline border */
+  --rule2:  #DCD3C7;   /* stronger border / hover border */
+
+  /* ---------- BRAND SPECTRUM (the gradient triad) ---------- */
+  --blue:    #1F3FCF;  /* electric indigo */
+  --violet:  #6B1FB8;  /* deep violet (primary brand hue) */
+  --magenta: #C7197A;  /* magenta (hot / accent) */
+  --ochre:   #C69A3A;  /* warm ochre (4th categorical) */
+
+  /* ---------- SEMANTIC ---------- */
+  --ok:    #2E9E6A;    /* success / done / positive signal */
+  --warn:  #D9534F;    /* error / negative signal */
+  --amber: #E08A1E;    /* warning / warm-lead / needs-attention */
+
+  /* ---------- SIGNATURE GRADIENTS ---------- */
+  --grad:       linear-gradient(120deg, #1F3FCF 0%, #6B1FB8 52%, #C7197A 100%);
+  --grad-soft:  linear-gradient(120deg, rgba(31,63,207,.10), rgba(199,25,122,.08));
+  --grad-glow:  linear-gradient(120deg, rgba(199,25,122,.08), rgba(107,31,184,.06));
+
+  /* ---------- CATEGORICAL GLYPH GRADIENTS (icon tiles) ---------- */
+  --g-blue:    linear-gradient(135deg, #1F3FCF, #4067e6);
+  --g-violet:  linear-gradient(135deg, #6B1FB8, #9b3fe0);
+  --g-magenta: linear-gradient(135deg, #C7197A, #e6479e);
+  --g-ochre:   linear-gradient(135deg, #C69A3A, #e0b658);
+
+  /* ---------- TYPE FAMILIES ---------- */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-ui:      'Inter Tight', system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* ---------- TYPE SCALE (px) ---------- */
+  --t-display: 58px;   /* hero greeting (serif) */
+  --t-h1:      40px;   /* page title (serif) */
+  --t-h2:      23px;   /* serif callout / AI recommendation line */
+  --t-h3:      16px;   /* card title (ui, 700) */
+  --t-body:    14px;   /* default body */
+  --t-sm:      13px;   /* dense body / table cell */
+  --t-xs:      12px;   /* fine print */
+  --t-label:   10px;   /* mono label (uppercase, tracked) */
+
+  /* ---------- RADII ---------- */
+  --r-xs:  6px;
+  --r-sm:  8px;
+  --r-md:  11px;
+  --r-lg:  14px;
+  --r-xl:  18px;
+  --r-2xl: 22px;
+  --r-pill: 99px;
+
+  /* ---------- SPACING (4px base) ---------- */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px; --sp-4: 16px;
+  --sp-5: 20px; --sp-6: 24px; --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+
+  /* ---------- ELEVATION ---------- */
+  --sh-sm:    0 1px 3px rgba(14,10,20,.08);
+  --sh-card:  0 12px 40px rgba(14,10,20,.06);
+  --sh-hover: 0 14px 34px rgba(14,10,20,.08);
+  --sh-pop:   0 8px 22px rgba(0,0,0,.40);              /* dark tooltips/menus */
+  --sh-brand: 0 6px 16px rgba(107,31,184,.32);         /* violet glow on brand btns */
+
+  /* ---------- MOTION ---------- */
+  --ease: cubic-bezier(.4,0,.2,1);
+  --dur-fast: .12s;
+  --dur:      .15s;
+  --dur-slow: .18s;
+}
+
+/* ============================================================
+   SEMANTIC ELEMENT DEFAULTS
+   ============================================================ */
+body {
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display + headings use the Instrument Serif voice */
+h1 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-h1); line-height: 1.0;  letter-spacing: -.01em; }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: var(--t-h2); line-height: 1.25; }
+h3 { font-family: var(--font-ui);      font-weight: 700; font-size: var(--t-h3); line-height: 1.3;  letter-spacing: -.01em; }
+
+p     { font-size: var(--t-body); color: var(--ink2); line-height: 1.55; }
+small { font-size: var(--t-xs);  color: var(--mute); }
+a     { color: var(--violet); text-decoration: none; }
+code, pre, kbd { font-family: var(--font-mono); }
+
+/* ---------- UTILITY CLASSES ---------- */
+.serif    { font-family: var(--font-display); font-weight: 400; font-style: normal; }
+.serif-i  { font-family: var(--font-display); font-style: italic; }
+.mono     { font-family: var(--font-mono); letter-spacing: .1em; text-transform: uppercase; }
+
+/* Gradient text — the brand's signature flourish, used sparingly on a word or mark */
+.grad-text {
+  background: var(--grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Mono eyebrow label — section kicker, with leading rule */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--violet);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+.eyebrow::before { content: ""; width: 18px; height: 1.5px; background: var(--violet); }
+
+/* Warm dotted-grid backdrop — the signature canvas texture (apply to a fixed ::before) */
+.bg-dotgrid::before {
+  content: "";
+  position: fixed; inset: 0; z-index: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(14,10,20,.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse at 60% 40%, #000 40%, transparent 85%);
+          mask-image: radial-gradient(ellipse at 60% 40%, #000 40%, transparent 85%);
+}

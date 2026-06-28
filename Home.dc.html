@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>KDigital — AI agents for every business</title>
+  <meta name="description" content="KDigital builds custom AI agents and apps that modernize how mid-market businesses sell, learn, and operate — agentic CRM, workflows, integrations, and security.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0A14">
+  <link rel="canonical" href="https://www.kdigital.ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KDigital">
+  <meta property="og:title" content="KDigital — AI agents for every business">
+  <meta property="og:description" content="KDigital builds custom AI agents and apps that modernize how mid-market businesses sell, learn, and operate — agentic CRM, workflows, integrations, and security.">
+  <meta property="og:url" content="https://www.kdigital.ai/">
+  <meta property="og:image" content="https://www.kdigital.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KDigital — AI agents for every business">
+  <meta name="twitter:description" content="KDigital builds custom AI agents and apps that modernize how mid-market businesses sell, learn, and operate — agentic CRM, workflows, integrations, and security.">
+  <meta name="twitter:image" content="https://www.kdigital.ai/og-image.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.kdigital.ai/#org","name":"KDigital Technologies","url":"https://www.kdigital.ai/","logo":"https://www.kdigital.ai/og-image.png","description":"AI-native software studio building custom AI agents and apps for mid-market businesses.","sameAs":["https://www.linkedin.com/company/kdigital","https://x.com/kdigital"],"address":[{"@type":"PostalAddress","addressLocality":"Hyderabad","addressCountry":"IN"},{"@type":"PostalAddress","addressLocality":"Bengaluru","addressCountry":"IN"},{"@type":"PostalAddress","addressLocality":"Atlanta","addressCountry":"US"}]},{"@type":"WebSite","@id":"https://www.kdigital.ai/#website","name":"KDigital","url":"https://www.kdigital.ai/","publisher":{"@id":"https://www.kdigital.ai/#org"}}]}</script>
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes heroIn { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes floaty { 0%,100% { transform:translateY(0) rotateX(8deg) rotateY(-9deg); } 50% { transform:translateY(-14px) rotateX(8deg) rotateY(-9deg); } }
+    @keyframes badgeFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-10px); } }
+    @keyframes auroraA { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(60px,40px) scale(1.15); } }
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-50px,30px) scale(1.1); } }
+    @keyframes pulseDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(.85); } }
+    @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+    @keyframes dash { to { stroke-dashoffset:-100; } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+    @supports (animation-timeline: view()) {
+      [data-reveal] { animation:revealKf .9s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 62%; }
+    }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden;">
+
+  <!-- ============ HERO ============ -->
+  <section style="position:relative; min-height:100vh; padding:150px 32px 90px; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.045) 1px, transparent 1px); background-size:24px 24px; -webkit-mask-image:radial-gradient(ellipse at 65% 35%, #000 35%, transparent 80%); mask-image:radial-gradient(ellipse at 65% 35%, #000 35%, transparent 80%); pointer-events:none;"></div>
+    <div id="orbA" style="position:absolute; top:-160px; left:-120px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(31,63,207,.28), transparent 65%); filter:blur(60px); animation:auroraA 16s ease-in-out infinite; pointer-events:none;"></div>
+    <div id="orbB" style="position:absolute; top:80px; right:-140px; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(199,25,122,.24), transparent 65%); filter:blur(60px); animation:auroraB 19s ease-in-out infinite; pointer-events:none;"></div>
+    <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;">
+      <div>
+        <div data-reveal class="reveal-init" data-reveal-delay="40" style="display:inline-flex; align-items:center; gap:10px; padding:7px 14px 7px 8px; border-radius:99px; background:rgba(255,255,255,.7); border:1px solid var(--rule); backdrop-filter:blur(8px); margin-bottom:26px;">
+          <span style="display:inline-flex; align-items:center; gap:6px; background:var(--grad); color:#fff; font-family:var(--font-mono); font-size:10px; letter-spacing:.12em; padding:4px 9px; border-radius:99px; text-transform:uppercase; font-weight:600;">New</span>
+          <span class="mono" style="font-size:11px; color:var(--ink2); letter-spacing:.1em;">Kona Agent OS · now in production</span>
+        </div>
+        <h1 data-reveal style="font-size:clamp(40px, 5vw, 62px); line-height:1.08; letter-spacing:-.015em; margin:0 0 26px;">Modernize your business with <span class="serif-i grad-text">AI that works</span> for you.</h1>
+        <p data-reveal class="reveal-init" data-reveal-delay="200" style="font-size:18.5px; line-height:1.6; color:var(--ink2); max-width:500px; margin:0 0 34px;">KDigital builds custom AI applications — agentic CRM, LMS, and commerce — that automate the busywork, surface the next best action, and grow your pipeline while you sleep.</p>
+        <div data-reveal class="reveal-init" data-reveal-delay="280" style="display:flex; gap:13px; align-items:center; flex-wrap:wrap; margin-bottom:38px;">
+          <a href="Contact.dc.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--grad); color:#fff; font-family:var(--font-ui); font-weight:700; font-size:15px; padding:14px 26px; border-radius:99px; text-decoration:none; box-shadow:var(--sh-brand); transition:transform .15s var(--ease), box-shadow .15s var(--ease);" style-hover="transform:translateY(-2px); box-shadow:0 10px 26px rgba(107,31,184,.45);">Book a free demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="Platform.dc.html" style="display:inline-flex; align-items:center; gap:8px; color:var(--ink); font-family:var(--font-ui); font-weight:600; font-size:15px; padding:14px 22px; border-radius:99px; text-decoration:none; border:1px solid var(--rule2); background:rgba(255,255,255,.6); transition:background .15s var(--ease);" style-hover="background:#fff;">Explore the platform</a>
+        </div>
+        <div data-reveal class="reveal-init" data-reveal-delay="360" style="display:flex; gap:30px; align-items:center;">
+          <div>
+            <div class="serif" style="font-size:30px; line-height:1; color:var(--ink);">3.2×</div>
+            <div class="mono" style="font-size:10px; color:var(--mute); margin-top:5px; letter-spacing:.1em;">FASTER LEAD-TO-DEMO</div>
+          </div>
+          <div style="width:1px; height:38px; background:var(--rule2);"></div>
+          <div>
+            <div class="serif" style="font-size:30px; line-height:1; color:var(--ink);">40%</div>
+            <div class="mono" style="font-size:10px; color:var(--mute); margin-top:5px; letter-spacing:.1em;">LESS MANUAL OPS</div>
+          </div>
+          <div style="width:1px; height:38px; background:var(--rule2);"></div>
+          <div>
+            <div class="serif" style="font-size:30px; line-height:1; color:var(--ink);">6 wks</div>
+            <div class="mono" style="font-size:10px; color:var(--mute); margin-top:5px; letter-spacing:.1em;">TO FIRST AGENT</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- floating product mockup -->
+      <div data-reveal class="reveal-init" data-reveal-delay="240" style="position:relative; perspective:1600px;">
+        <div style="animation:floaty 8s ease-in-out infinite; transform-style:preserve-3d; background:#fff; border:1px solid var(--rule); border-radius:18px; box-shadow:0 40px 90px rgba(14,10,20,.16); overflow:hidden;">
+          <div style="display:flex; align-items:center; gap:8px; padding:13px 16px; border-bottom:1px solid var(--rule); background:var(--warm);">
+            <span style="width:11px; height:11px; border-radius:50%; background:#E08A1E;"></span>
+            <span style="width:11px; height:11px; border-radius:50%; background:#C69A3A;"></span>
+            <span style="width:11px; height:11px; border-radius:50%; background:#2E9E6A;"></span>
+            <div style="flex:1; display:flex; justify-content:center;"><span class="mono" style="font-size:10px; color:var(--mute); background:var(--paper); border:1px solid var(--rule); padding:4px 14px; border-radius:99px; letter-spacing:.06em;">app.kdigital.ai</span></div>
+          </div>
+          <div style="padding:22px;">
+            <div class="mono" style="font-size:10px; color:var(--violet); letter-spacing:.14em; margin-bottom:6px;">GOOD MORNING, MANIKANTA</div>
+            <div class="serif" style="font-size:26px; line-height:1.1; margin-bottom:18px;">Let's <span class="serif-i grad-text">grow the pipeline.</span></div>
+            <div style="background:var(--grad-soft); border:1px solid rgba(107,31,184,.18); border-radius:12px; padding:13px 14px; margin-bottom:14px; display:flex; gap:11px;">
+              <span style="flex-shrink:0; width:28px; height:28px; border-radius:8px; background:var(--grad); display:flex; align-items:center; justify-content:center;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 7.3L21 12l-6.8 2.7L12 22l-2.2-7.3L3 12l6.8-2.7z"></path></svg></span>
+              <div style="font-size:12.5px; line-height:1.5; color:var(--ink2);"><strong style="color:var(--ink);">14 leads went hot overnight.</strong> Your agents drafted 9 follow-ups — approving now recovers ~₹6.2L in pipeline.</div>
+            </div>
+            <div style="position:relative; background:var(--ink); border-radius:12px; padding:15px; overflow:hidden; margin-bottom:14px;">
+              <div style="position:absolute; bottom:-40px; right:-30px; width:180px; height:180px; border-radius:50%; background:var(--grad); filter:blur(50px); opacity:.5;"></div>
+              <div style="position:relative;">
+                <div class="mono" style="font-size:9.5px; color:rgba(255,255,255,.55); letter-spacing:.16em; margin-bottom:8px;">NEXT BEST ACTION · 92% CONFIDENCE</div>
+                <div style="color:#fff; font-size:13px; line-height:1.5; margin-bottom:13px;">Send the "agentic capstone walkthrough" re-engagement email to Aarav — he opens email at ~9 PM IST.</div>
+                <div style="display:flex; gap:8px;"><span style="background:#fff; color:var(--ink); font-family:var(--font-ui); font-weight:700; font-size:11.5px; padding:7px 14px; border-radius:99px;">Approve &amp; send</span><span style="border:1px solid rgba(255,255,255,.25); color:#fff; font-size:11.5px; font-weight:600; padding:7px 14px; border-radius:99px;">Edit draft</span></div>
+              </div>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:9px;">
+              <div style="display:flex; align-items:center; gap:10px;"><span style="width:8px; height:8px; border-radius:50%; background:#2E9E6A; animation:pulseDot 2s ease-in-out infinite;"></span><span style="font-size:12px; font-weight:600; color:var(--ink);">Outreach Agent</span><span class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.06em;">RUNNING · DRAFTING 9</span></div>
+              <div style="display:flex; align-items:center; gap:10px;"><span style="width:8px; height:8px; border-radius:50%; background:var(--amber);"></span><span style="font-size:12px; font-weight:600; color:var(--ink);">Scheduler Agent</span><span class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.06em;">IDLE · NEXT 2:00 PM</span></div>
+            </div>
+          </div>
+        </div>
+        <div style="position:absolute; top:-24px; right:-26px; animation:badgeFloat 6s ease-in-out infinite; background:#fff; border:1px solid var(--rule); border-radius:14px; padding:12px 15px; box-shadow:var(--sh-card); display:flex; align-items:center; gap:11px;">
+          <div style="position:relative; width:38px; height:38px;"><svg width="38" height="38" viewBox="0 0 38 38"><circle cx="19" cy="19" r="16" fill="none" stroke="var(--rule)" stroke-width="3.5"></circle><circle cx="19" cy="19" r="16" fill="none" stroke="url(#hg)" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="100.5" stroke-dashoffset="14" transform="rotate(-90 19 19)"></circle><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F3FCF"></stop><stop offset="1" stop-color="#C7197A"></stop></linearGradient></defs></svg><span class="mono" style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:9.5px; font-weight:600; color:var(--ink);">89</span></div>
+          <div><div style="font-size:12px; font-weight:700; color:var(--ink); line-height:1.1;">Aarav S.</div><div class="mono" style="font-size:9px; color:var(--mute); margin-top:3px; letter-spacing:.06em;">SCORE 62 → 89</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LOGO MARQUEE ============ -->
+  <section style="background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:34px 0; overflow:hidden;">
+    <div style="text-align:center; margin-bottom:24px;"><span class="mono" style="font-size:11px; color:var(--mute); letter-spacing:.14em;">BUILT TO PLUG INTO THE TOOLS YOU ALREADY RUN</span></div>
+    <div style="position:relative; -webkit-mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent); mask-image:linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);">
+      <div style="display:flex; gap:64px; width:max-content; animation:marquee 32s linear infinite; align-items:center;">
+        <sc-for list="{{ logos }}" as="logo" hint-placeholder-count="16">
+          <span style="font-family:var(--font-ui); font-weight:700; font-size:21px; color:var(--mute); white-space:nowrap; letter-spacing:-.01em;">{{ logo }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ METRICS ============ -->
+  <section style="max-width:1160px; margin:0 auto; padding:96px 32px;">
+    <div data-reveal class="reveal-init" style="text-align:center; margin-bottom:54px;">
+      <span class="eyebrow" style="justify-content:center;">By the numbers</span>
+      <h2 class="serif" style="font-size:40px; margin:16px 0 0; line-height:1.1;">Outcomes mid-market teams<br>actually feel.</h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:22px;">
+      <sc-for list="{{ metrics }}" as="m" hint-placeholder-count="4">
+        <div data-reveal class="reveal-init" data-reveal-delay="{{ m.delay }}" style="background:var(--paper); border:1px solid var(--rule); border-radius:18px; padding:30px 26px; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+          <div class="serif grad-text" style="font-size:54px; line-height:1;">{{ m.value }}</div>
+          <div style="font-weight:700; font-size:14.5px; color:var(--ink); margin:14px 0 6px;">{{ m.title }}</div>
+          <div style="font-size:13px; color:var(--mute); line-height:1.5;">{{ m.sub }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- ============ PLATFORM / PRODUCTS ============ -->
+  <section style="position:relative; background:var(--warm); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:100px 32px; overflow:hidden;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal class="reveal-init" style="max-width:640px; margin-bottom:60px;">
+        <span class="eyebrow">The platform</span>
+        <h2 class="serif" style="font-size:44px; margin:16px 0 16px; line-height:1.05;">Three production-grade AI apps. <span class="serif-i grad-text">One agentic core.</span></h2>
+        <p style="font-size:17px; color:var(--ink2); line-height:1.6;">Every KDigital product runs on the same Agent OS — autonomous agents that score, draft, decide, and act, with a human in the loop for every important call.</p>
+      </div>
+      <div style="display:flex; flex-direction:column; gap:26px;">
+        <sc-for list="{{ products }}" as="p" hint-placeholder-count="3">
+          <div data-reveal class="reveal-init" style="background:var(--paper); border:1px solid var(--rule); border-radius:22px; padding:38px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; box-shadow:var(--sh-card);">
+            <div style="order:{{ p.textOrder }};">
+              <div style="display:inline-flex; align-items:center; gap:9px; margin-bottom:18px;"><span style="width:38px; height:38px; border-radius:11px; background:{{ p.grad }}; display:flex; align-items:center; justify-content:center; color:#fff;">{{ p.iconEl }}</span><span class="mono" style="font-size:11px; letter-spacing:.14em; color:var(--mute);">{{ p.kicker }}</span></div>
+              <h3 style="font-family:var(--font-ui); font-weight:700; font-size:27px; letter-spacing:-.02em; margin:0 0 12px; color:var(--ink);">{{ p.title }}</h3>
+              <p style="font-size:15px; color:var(--ink2); line-height:1.6; margin:0 0 22px;">{{ p.body }}</p>
+              <div style="display:flex; flex-direction:column; gap:11px; margin-bottom:24px;">
+                <sc-for list="{{ p.features }}" as="f" hint-placeholder-count="3">
+                  <div style="display:flex; align-items:flex-start; gap:10px;"><span style="flex-shrink:0; width:20px; height:20px; margin-top:1px; border-radius:50%; background:var(--grad-soft); display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span><span style="font-size:14px; font-weight:600; line-height:1.4; color:var(--ink2);">{{ f }}</span></div>
+                </sc-for>
+              </div>
+              <a href="Platform.dc.html" style="display:inline-flex; align-items:center; gap:7px; color:var(--violet); font-weight:700; font-size:14px; text-decoration:none;">Explore {{ p.title }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+            </div>
+            <div style="order:{{ p.visualOrder }}; position:relative; background:{{ p.softBg }}; border:1px solid var(--rule); border-radius:16px; padding:24px; min-height:240px; overflow:hidden;">{{ p.visualEl }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BENTO ============ -->
+  <section style="max-width:1160px; margin:0 auto; padding:104px 32px 30px;">
+    <div data-reveal style="text-align:center; margin-bottom:50px;">
+      <span class="eyebrow" style="justify-content:center;">One platform</span>
+      <h2 class="serif" style="font-size:42px; margin:16px 0 0; line-height:1.05;">Everything your business needs, <span class="serif-i grad-text">already connected.</span></h2>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:178px; gap:18px;">
+
+      <!-- A: featured dark -->
+      <div data-reveal style="grid-column:1 / 3; grid-row:1 / 3; position:relative; background:var(--ink); border-radius:20px; padding:32px; overflow:hidden; display:flex; flex-direction:column;">
+        <div style="position:absolute; top:-70px; right:-50px; width:300px; height:300px; border-radius:50%; background:var(--grad); filter:blur(90px); opacity:.4; pointer-events:none;"></div>
+        <div style="position:relative; display:flex; flex-direction:column; height:100%;">
+          <span class="mono" style="font-size:10px; color:rgba(255,255,255,.55); letter-spacing:.16em;">AGENT WORKFORCE</span>
+          <h3 class="serif" style="font-size:27px; line-height:1.22; color:#fff; margin:14px 0 14px;">Agents that <span class="serif-i" style="background:linear-gradient(120deg,#7da0ff,#ff8fd0); -webkit-background-clip:text; background-clip:text; color:transparent;">act</span>, not just answer.</h3>
+          <p style="font-size:14px; color:rgba(255,255,255,.65); line-height:1.6; margin:0; max-width:340px;">A coordinated team of agents reads your data, decides the next best move, and executes it — with you approving what matters.</p>
+          <div style="margin-top:auto; display:flex; flex-direction:column; gap:9px; padding-top:22px;">
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:7px; height:7px; border-radius:50%; background:#2E9E6A; animation:pulseDot 2s ease-in-out infinite;"></span><span style="font-size:12.5px; font-weight:600; color:#fff;">Outreach Agent</span><span class="mono" style="font-size:9px; color:rgba(255,255,255,.5); letter-spacing:.06em;">DRAFTING 9</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:7px; height:7px; border-radius:50%; background:#2E9E6A; animation:pulseDot 2s ease-in-out infinite;"></span><span style="font-size:12.5px; font-weight:600; color:#fff;">Lead Scoring Agent</span><span class="mono" style="font-size:9px; color:rgba(255,255,255,.5); letter-spacing:.06em;">14 HOT</span></div>
+            <div style="display:flex; align-items:center; gap:10px;"><span style="width:7px; height:7px; border-radius:50%; background:var(--amber);"></span><span style="font-size:12.5px; font-weight:600; color:#fff;">Scheduler Agent</span><span class="mono" style="font-size:9px; color:rgba(255,255,255,.5); letter-spacing:.06em;">NEXT 2:00 PM</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- B: integrations -->
+      <div data-reveal style="grid-column:3 / 5; grid-row:1 / 2; background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:28px; display:flex; flex-direction:column; justify-content:space-between; box-shadow:var(--sh-card);">
+        <div style="display:flex; align-items:center; justify-content:space-between;"><h3 style="font-family:var(--font-ui); font-weight:700; font-size:18px; margin:0; color:var(--ink);">Plugs into your stack</h3><span class="serif grad-text" style="font-size:30px; line-height:1;">50+</span></div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Salesforce</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">ServiceNow</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Workday</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Zoho</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Power BI</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">WhatsApp</span>
+        </div>
+      </div>
+
+      <!-- C: confidence metric -->
+      <div data-reveal style="grid-column:3 / 4; grid-row:2 / 3; background:var(--grad-soft); border:1px solid rgba(107,31,184,.18); border-radius:20px; padding:26px; display:flex; flex-direction:column; justify-content:center;">
+        <div class="serif grad-text" style="font-size:46px; line-height:1;">92%</div>
+        <div class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.1em; margin-top:10px;">AVG DECISION CONFIDENCE</div>
+        <div style="font-size:12.5px; color:var(--ink2); line-height:1.5; margin-top:8px;">Every recommendation comes with a stated confidence and a why.</div>
+      </div>
+
+      <!-- D: human in loop -->
+      <div data-reveal style="grid-column:4 / 5; grid-row:2 / 3; background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:26px; display:flex; flex-direction:column; justify-content:center; box-shadow:var(--sh-card);">
+        <span style="width:42px; height:42px; border-radius:11px; background:var(--g-ochre); display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:14px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg></span>
+        <h3 style="font-family:var(--font-ui); font-weight:700; font-size:15px; margin:0 0 5px; color:var(--ink);">Human in the loop</h3>
+        <div style="font-size:12.5px; color:var(--ink2); line-height:1.5;">You approve every important call. Override any agent, instantly.</div>
+      </div>
+
+      <!-- E: time to value -->
+      <div data-reveal style="grid-column:1 / 3; grid-row:3 / 4; background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:28px; display:flex; align-items:center; gap:24px; box-shadow:var(--sh-card);">
+        <div><div class="serif grad-text" style="font-size:52px; line-height:1;">6 wks</div><div class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.1em; margin-top:8px;">TO FIRST PRODUCTION AGENT</div></div>
+        <div style="flex:1; display:flex; flex-direction:column; gap:9px;">
+          <div style="display:flex; align-items:center; gap:10px;"><span style="width:22px; height:22px; border-radius:50%; background:var(--grad); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:600;">1</span><span style="font-size:13px; color:var(--ink2);">Map the highest-leverage workflow</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="width:22px; height:22px; border-radius:50%; background:var(--grad); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:600;">2</span><span style="font-size:13px; color:var(--ink2);">Connect, configure &amp; pilot</span></div>
+          <div style="display:flex; align-items:center; gap:10px;"><span style="width:22px; height:22px; border-radius:50%; background:var(--grad); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10px; font-weight:600;">3</span><span style="font-size:13px; color:var(--ink2);">Go live &amp; expand</span></div>
+        </div>
+      </div>
+
+      <!-- F: security -->
+      <div data-reveal style="grid-column:3 / 5; grid-row:3 / 4; background:var(--warm); border:1px solid var(--rule); border-radius:20px; padding:28px; display:flex; flex-direction:column; justify-content:center;">
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:14px;"><span style="width:42px; height:42px; border-radius:11px; background:var(--g-blue); display:flex; align-items:center; justify-content:center; color:#fff;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><h3 style="font-family:var(--font-ui); font-weight:700; font-size:18px; margin:0; color:var(--ink);">Enterprise-grade, by default</h3></div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px;">
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--paper); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Encryption</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--paper); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Role-based access</span>
+          <span style="font-family:var(--font-mono); font-size:11px; color:var(--ink2); background:var(--paper); border:1px solid var(--rule); padding:6px 12px; border-radius:99px;">Full audit trail</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============ ECOSYSTEM / AGENT GRAPH ============ -->
+  <section style="position:relative; max-width:1160px; margin:0 auto; padding:104px 32px; text-align:center; overflow:hidden;">
+    <div data-reveal class="reveal-init">
+      <span class="eyebrow" style="justify-content:center;">Agent OS</span>
+      <h2 class="serif" style="font-size:44px; margin:16px 0 16px; line-height:1.05;">A team of agents, <span class="serif-i grad-text">always on.</span></h2>
+      <p style="font-size:17px; color:var(--ink2); line-height:1.6; max-width:560px; margin:0 auto 50px;">Specialized agents collaborate around a shared memory of your business — and hand off to a human exactly when judgment matters.</p>
+    </div>
+    <div data-reveal style="position:relative; max-width:760px; margin:0 auto;">{{ graphEl }}</div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section style="background:var(--paper); border-top:1px solid var(--rule); padding:100px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal class="reveal-init" style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:20px; margin-bottom:50px;">
+        <div><span class="eyebrow">Services</span><h2 class="serif" style="font-size:40px; margin:16px 0 0; line-height:1.05;">From strategy to shipped.</h2></div>
+        <p style="max-width:380px; font-size:15px; color:var(--ink2); line-height:1.6; margin:0;">We don't just hand you software. Our teams design, build, and run the whole modernization with you.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+          <div data-reveal class="reveal-init" data-reveal-delay="{{ s.delay }}" style="border:1px solid var(--rule); border-radius:18px; padding:28px; background:var(--warm); transition:transform .18s var(--ease), box-shadow .18s var(--ease), border-color .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover); border-color:var(--rule2);">
+            <span style="width:44px; height:44px; border-radius:12px; background:{{ s.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:18px;">{{ s.iconEl }}</span>
+            <h3 style="font-family:var(--font-ui); font-weight:700; font-size:18px; margin:0 0 9px; color:var(--ink);">{{ s.title }}</h3>
+            <p style="font-size:13.5px; color:var(--ink2); line-height:1.55; margin:0;">{{ s.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INDUSTRIES ============ -->
+  <section style="background:var(--warm); border-top:1px solid var(--rule); padding:100px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal class="reveal-init" style="text-align:center; margin-bottom:54px;">
+        <span class="eyebrow" style="justify-content:center;">Solutions by industry</span>
+        <h2 class="serif" style="font-size:42px; margin:16px 0 0; line-height:1.05;">Tuned to how <span class="serif-i grad-text">your</span> world works.</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;">
+        <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="6">
+          <a href="Solutions.dc.html" data-reveal class="reveal-init" data-reveal-delay="{{ ind.delay }}" style="position:relative; display:block; background:var(--paper); border:1px solid var(--rule); border-radius:16px; padding:26px; text-decoration:none; overflow:hidden; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+            <span style="width:40px; height:40px; border-radius:11px; background:var(--warm2); display:flex; align-items:center; justify-content:center; color:var(--violet); margin-bottom:42px;">{{ ind.iconEl }}</span>
+            <div style="font-family:var(--font-ui); font-weight:700; font-size:17px; color:var(--ink); margin-bottom:6px;">{{ ind.title }}</div>
+            <div style="font-size:13px; color:var(--mute); line-height:1.5;">{{ ind.body }}</div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section style="background:var(--paper); border-top:1px solid var(--rule); padding:100px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal class="reveal-init" style="margin-bottom:48px;"><span class="eyebrow">Trusted by teams</span><h2 class="serif" style="font-size:40px; margin:16px 0 0; line-height:1.05;">Data into decisions.</h2></div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <sc-for list="{{ testimonials }}" as="t" hint-placeholder-count="3">
+          <div data-reveal class="reveal-init" data-reveal-delay="{{ t.delay }}" style="border:1px solid var(--rule); border-radius:18px; padding:30px; background:var(--warm); display:flex; flex-direction:column;">
+            <div style="color:var(--violet); margin-bottom:16px; font-family:var(--font-display); font-size:46px; line-height:.6; height:24px;">"</div>
+            <p style="font-size:15px; color:var(--ink2); line-height:1.65; margin:0 0 24px; flex:1;">{{ t.quote }}</p>
+            <div style="display:flex; align-items:center; gap:12px;">
+              <span style="width:42px; height:42px; border-radius:50%; background:{{ t.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:15px;">{{ t.initial }}</span>
+              <div><div style="font-weight:700; font-size:14px; color:var(--ink);">{{ t.name }}</div><div class="mono" style="font-size:10px; color:var(--mute); margin-top:3px; letter-spacing:.08em;">{{ t.role }}</div></div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section style="padding:90px 32px;">
+    <div data-reveal class="reveal-init" style="position:relative; max-width:1160px; margin:0 auto; background:var(--ink); border-radius:28px; padding:80px 56px; overflow:hidden; text-align:center;">
+      <div style="position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:680px; height:420px; background:var(--grad); filter:blur(120px); opacity:.4; pointer-events:none;"></div>
+      <div style="position:relative;">
+        <h2 class="serif" style="font-size:50px; color:#fff; line-height:1.05; margin:0 0 18px;">See your business, <span class="serif-i" style="background:linear-gradient(120deg,#7da0ff,#ff8fd0); -webkit-background-clip:text; background-clip:text; color:transparent;">run by agents.</span></h2>
+        <p style="font-size:18px; color:rgba(255,255,255,.7); max-width:480px; margin:0 auto 34px; line-height:1.6;">Book a 30-minute demo. We'll map one workflow to an agent and show you the ROI — live.</p>
+        <div style="display:flex; gap:13px; justify-content:center; flex-wrap:wrap;">
+          <a href="Contact.dc.html" style="background:#fff; color:var(--ink); font-family:var(--font-ui); font-weight:700; font-size:15px; padding:15px 30px; border-radius:99px; text-decoration:none; transition:transform .15s var(--ease);" style-hover="transform:translateY(-2px);">Book a free demo</a>
+          <a href="Platform.dc.html" style="border:1px solid rgba(255,255,255,.28); color:#fff; font-family:var(--font-ui); font-weight:600; font-size:15px; padding:15px 28px; border-radius:99px; text-decoration:none;">See the platform</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="home" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    // hero parallax
+    this._onScroll = () => {
+      const y = window.scrollY;
+      const a = document.getElementById('orbA');
+      const b = document.getElementById('orbB');
+      if (a) a.style.transform = `translateY(${y * 0.12}px)`;
+      if (b) b.style.transform = `translateY(${y * -0.08}px)`;
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  renderVals() {
+    const raw = (html) => React.createElement('span', { style: { display: 'contents' }, dangerouslySetInnerHTML: { __html: html } });
+    const logos = ['Salesforce','ServiceNow','Workday','Microsoft','OpenAI','Power BI','Zoho','Slack','Notion','Adobe','Figma','Anthropic'];
+    const logosLoop = logos.concat(logos);
+
+    const metrics = [
+      { value: '3.2×', title: 'Faster lead-to-demo', sub: 'Re-engagement within 48h converts far better — agents never miss the window.', delay: 0 },
+      { value: '40%', title: 'Less manual ops', sub: 'Routine drafting, scoring, and scheduling handled before you log in.', delay: 80 },
+      { value: '98%', title: 'Client retention', sub: 'Teams stay because the system keeps compounding their advantage.', delay: 160 },
+      { value: '6 wks', title: 'To first agent', sub: 'From kickoff to a production agent running in a real workflow.', delay: 240 },
+    ];
+
+    const crmVisual = `
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:11px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#2E9E6A;"></span>
+          <span style="font-size:12.5px;font-weight:600;color:var(--ink);">Lead Scoring Agent</span>
+          <span style="margin-left:auto;font-family:var(--font-mono);font-size:9.5px;color:var(--mute);letter-spacing:.06em;">14 HOT</span>
+        </div>
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:11px;padding:14px;">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--mute);letter-spacing:.14em;margin-bottom:8px;">PIPELINE · THIS WEEK</div>
+          <div style="display:flex;align-items:flex-end;gap:7px;height:64px;">
+            <div style="flex:1;height:40%;background:var(--warm2);border-radius:4px;"></div>
+            <div style="flex:1;height:62%;background:rgba(31,63,207,.4);border-radius:4px;"></div>
+            <div style="flex:1;height:50%;background:var(--warm2);border-radius:4px;"></div>
+            <div style="flex:1;height:85%;background:var(--grad);border-radius:4px;"></div>
+            <div style="flex:1;height:70%;background:rgba(199,25,122,.4);border-radius:4px;"></div>
+            <div style="flex:1;height:95%;background:var(--grad);border-radius:4px;"></div>
+          </div>
+          <div style="font-family:var(--font-display);font-size:24px;margin-top:12px;color:var(--ink);">₹2.4Cr <span style="font-size:12px;color:var(--ok);font-family:var(--font-mono);">▲ 86% TO TARGET</span></div>
+        </div>
+      </div>`;
+    const lmsVisual = `
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:11px;padding:14px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+            <span style="width:34px;height:34px;border-radius:50%;background:var(--g-violet);"></span>
+            <div><div style="font-size:13px;font-weight:700;color:var(--ink);">Aarav's learning path</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--mute);letter-spacing:.06em;">AGENTIC AI · MODULE 4/7</div></div>
+          </div>
+          <div style="height:8px;border-radius:99px;background:var(--warm2);overflow:hidden;"><div style="width:58%;height:100%;background:var(--grad);"></div></div>
+          <div style="font-family:var(--font-mono);font-size:9.5px;color:var(--mute);margin-top:8px;letter-spacing:.06em;">58% COMPLETE · ON PACE</div>
+        </div>
+        <div style="background:var(--grad-soft);border:1px solid rgba(107,31,184,.18);border-radius:11px;padding:12px 14px;font-size:12px;line-height:1.5;color:var(--ink2);"><strong style="color:var(--ink);">Tutor Agent:</strong> Aarav struggled with vector stores — queued a 4-min refresher before the capstone.</div>
+      </div>`;
+    const comVisual = `
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:11px;padding:14px;">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--mute);letter-spacing:.14em;margin-bottom:10px;">CONVERSION · LAST 24H</div>
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;">
+            <div><div style="font-family:var(--font-display);font-size:30px;color:var(--ink);line-height:1;">+27%</div><div style="font-size:11px;color:var(--mute);margin-top:4px;">vs. last week</div></div>
+            <svg width="120" height="50" viewBox="0 0 120 50" fill="none"><path d="M2 44 L24 36 L46 40 L68 22 L90 26 L118 6" stroke="url(#cg)" stroke-width="2.5" stroke-linecap="round"/><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1F3FCF"/><stop offset="1" stop-color="#C7197A"/></linearGradient></defs></svg>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--rule);border-radius:11px;padding:12px 14px;display:flex;align-items:center;gap:11px;">
+          <span style="width:30px;height:30px;border-radius:8px;background:var(--g-magenta);"></span>
+          <span style="font-size:12px;color:var(--ink2);line-height:1.4;"><strong style="color:var(--ink);">Recovered 312 carts</strong> with timed WhatsApp nudges.</span>
+        </div>
+      </div>`;
+
+    const products = [
+      { kicker: 'EDIFY CRM', title: 'Agentic CRM', grad: 'var(--g-violet)',
+        icon: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path></svg>',
+        body: 'Agents score every lead, draft the follow-up, book the demo, and move the pipeline card — surfacing a next best action you simply approve.',
+        features: ['Autonomous lead scoring','One-click approve AI outreach','Confidence-scored forecasting'],
+        softBg: 'var(--warm)', visual: crmVisual, textOrder: 1, visualOrder: 2 },
+      { kicker: 'EDIFY LMS', title: 'Adaptive LMS', grad: 'var(--g-blue)',
+        icon: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>',
+        body: 'Personalized learning paths that adapt in real time, a tutor agent that spots gaps before exams, and progress tracking leaders can trust.',
+        features: ['Self-adjusting learning paths','Tutor agent flags risk early','Precise progress tracking'],
+        softBg: 'var(--warm)', visual: lmsVisual, textOrder: 2, visualOrder: 1 },
+      { kicker: 'COMMERCE AI', title: 'Commerce AI', grad: 'var(--g-magenta)',
+        icon: '<svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path></svg>',
+        body: 'Optimize every stage of the journey — personalized recommendations, automated inventory, and timed nudges that recover carts and grow revenue.',
+        features: ['Personalized recommendations','Automated inventory & restock','Cart-recovery automation'],
+        softBg: 'var(--warm)', visual: comVisual, textOrder: 1, visualOrder: 2 },
+    ];
+
+    const services = [
+      { title: 'AI Marketing', grad: 'var(--g-magenta)', delay: 0, body: 'Campaigns, content, and audience engagement powered by generative AI — at the speed your market moves.',
+        icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l18-5v12L3 14v-3z"></path><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"></path></svg>' },
+      { title: 'Web & App Dev', grad: 'var(--g-violet)', delay: 80, body: 'Sleek, responsive, AI-driven interfaces and scalable systems that turn your online presence into a growth engine.',
+        icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>' },
+      { title: 'Analytics', grad: 'var(--g-blue)', delay: 160, body: 'Real-time dashboards, reporting, and visualization that turn raw data into decisions you can defend.',
+        icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>' },
+      { title: 'UX Design', grad: 'var(--g-ochre)', delay: 0, body: 'Research-led, conversion-focused product design that makes complex AI feel effortless to use.',
+        icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path></svg>' },
+      { title: 'Salesforce', grad: 'var(--g-blue)', delay: 80, body: 'Agentforce-ready implementation and customization that gets your CRM doing real work, fast.',
+        icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>' },
+      { title: 'Agent Engineering', grad: 'var(--g-violet)', delay: 160, body: 'We design, deploy, and run production AI agents inside your real systems — with you, not just for you.',
+        icon: '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 7.3L21 12l-6.8 2.7L12 22l-2.2-7.3L3 12l6.8-2.7z"></path></svg>' },
+    ];
+
+    const indIcon = (p) => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+    const industries = [
+      { title: 'Education', delay: 0, body: 'AI-driven lead management and adaptive learning for institutions.', icon: indIcon('<path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path>') },
+      { title: 'Healthcare', delay: 60, body: 'Intelligent patient engagement and operations.', icon: indIcon('<path d="M12 21s-8-4.5-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 6.5-8 11-8 11z"></path>') },
+      { title: 'Retail', delay: 120, body: 'Personalized engagement that drives sales.', icon: indIcon('<circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>') },
+      { title: 'Real Estate', delay: 0, body: 'AI lead management and deeper buyer insight.', icon: indIcon('<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path>') },
+      { title: 'Financial Services', delay: 60, body: 'Client engagement and growth, AI-powered.', icon: indIcon('<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>') },
+      { title: 'Government', delay: 120, body: 'AI-powered citizen engagement and services.', icon: indIcon('<path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"></path>') },
+    ];
+
+    const testimonials = [
+      { quote: 'Partnering with KDigital for data analytics was one of the best decisions we made. The insights we derive now are invaluable — they truly turn data into decisions.', name: 'Srinivas', role: 'HEAD OF MARKETING', initial: 'S', grad: 'var(--g-violet)', delay: 0 },
+      { quote: 'Their approach to modernization revolutionized our operations and our mindset toward change. Kudos to their agility and dedication.', name: 'Abhinav', role: 'PRODUCT DESIGN LEAD', initial: 'A', grad: 'var(--g-blue)', delay: 80 },
+      { quote: 'KDigital\'s AI solutions are top-notch. They unlocked new levels of customer service and product innovation — an incredible journey of growth.', name: 'Chandu', role: 'SALESFORCE PRACTICE', initial: 'C', grad: 'var(--g-magenta)', delay: 160 },
+    ];
+
+    // agent ecosystem graph
+    const node = (x, y, label, glyph, hub) => {
+      const r = hub ? 52 : 38;
+      const fill = hub ? 'var(--grad)' : '#fff';
+      const stroke = hub ? 'none' : 'var(--rule2)';
+      const txt = hub ? '#fff' : 'var(--ink)';
+      return `<g><circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="1.5" filter="url(#sh)"></circle>
+        <text x="${x}" y="${hub ? y - 4 : y + 2}" text-anchor="middle" font-family="Inter Tight, sans-serif" font-weight="${hub ? 800 : 700}" font-size="${hub ? 13 : 11}" fill="${txt}">${label}</text>
+        ${hub ? `<text x="${x}" y="${y+14}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" letter-spacing="1.5" fill="rgba(255,255,255,.8)">AGENT OS</text>` : ''}</g>`;
+    };
+    const cx = 380, cy = 175;
+    const spokes = [
+      { x: 100, y: 70, label: 'Outreach' },
+      { x: 660, y: 70, label: 'Scoring' },
+      { x: 70, y: 280, label: 'Scheduler' },
+      { x: 690, y: 280, label: 'Forecast' },
+      { x: 380, y: 320, label: 'Tutor' },
+    ];
+    let lines = '';
+    spokes.forEach(s => {
+      lines += `<line x1="${cx}" y1="${cy}" x2="${s.x}" y2="${s.y}" stroke="var(--rule2)" stroke-width="1.5" stroke-dasharray="5 5" style="animation:dash 3s linear infinite;"></line>`;
+    });
+    let nodes = node(cx, cy, 'Kona', '', true);
+    spokes.forEach(s => { nodes += node(s.x, s.y, s.label, ''); });
+    const graphSvg = `<svg viewBox="0 0 760 390" width="100%" style="max-width:760px;">
+      <defs><filter id="sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="rgba(14,10,20,.10)"></feDropShadow></filter></defs>
+      ${lines}${nodes}</svg>`;
+
+    products.forEach(p => { p.iconEl = raw(p.icon); p.visualEl = raw(p.visual); });
+    services.forEach(s => s.iconEl = raw(s.icon));
+    industries.forEach(i => i.iconEl = raw(i.icon));
+    const graphEl = raw(graphSvg);
+
+    return { logos: logosLoop, metrics, products, services, industries, testimonials, graphEl };
+  }
+}
+</script>
+</body>
+</html>

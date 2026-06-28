@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Integrations — Agent Fabric | KDigital</title>
+  <meta name="description" content="Connect Salesforce, ServiceNow, your data warehouse, and 250+ apps to Agent OS. Turn any API into agent-ready tools with native MCP and A2A.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0A14">
+  <link rel="canonical" href="https://www.kdigital.ai/integrations">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KDigital">
+  <meta property="og:title" content="Integrations — Agent Fabric | KDigital">
+  <meta property="og:description" content="Connect Salesforce, ServiceNow, your data warehouse, and 250+ apps to Agent OS. Turn any API into agent-ready tools with native MCP and A2A.">
+  <meta property="og:url" content="https://www.kdigital.ai/integrations">
+  <meta property="og:image" content="https://www.kdigital.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Integrations — Agent Fabric | KDigital">
+  <meta name="twitter:description" content="Connect Salesforce, ServiceNow, your data warehouse, and 250+ apps to Agent OS. Turn any API into agent-ready tools with native MCP and A2A.">
+  <meta name="twitter:image" content="https://www.kdigital.ai/og-image.png">
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes auroraA { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(50px,30px) scale(1.12); } }
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-40px,20px) scale(1.1); } }
+    @keyframes pulseDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(.85); } }
+    @keyframes hubPulse { 0%,100% { box-shadow:0 0 0 0 rgba(107,31,184,.34), var(--sh-brand); } 50% { box-shadow:0 0 0 16px rgba(107,31,184,0), var(--sh-brand); } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+    @supports (animation-timeline: view()) { [data-reveal] { animation:revealKf .9s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 62%; } }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden;">
+
+  <!-- HERO -->
+  <section style="position:relative; padding:150px 32px 70px; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.05) 1px, transparent 1px); background-size:22px 22px; -webkit-mask-image:radial-gradient(ellipse at 70% 40%, #000 32%, transparent 78%); mask-image:radial-gradient(ellipse at 70% 40%, #000 32%, transparent 78%);"></div>
+    <div style="position:absolute; top:-150px; left:-100px; width:520px; height:520px; border-radius:50%; background:radial-gradient(circle, rgba(31,63,207,.16), transparent 65%); filter:blur(60px); animation:auroraA 18s ease-in-out infinite;"></div>
+    <div style="position:absolute; top:-20px; right:-140px; width:560px; height:560px; border-radius:50%; background:radial-gradient(circle, rgba(199,25,122,.14), transparent 65%); filter:blur(60px); animation:auroraB 21s ease-in-out infinite;"></div>
+    <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
+      <div>
+        <div data-reveal style="display:inline-flex; align-items:center; gap:9px; padding:7px 15px 7px 9px; border-radius:99px; background:rgba(255,255,255,.7); border:1px solid var(--rule); backdrop-filter:blur(8px); margin-bottom:22px;">
+          <span style="display:inline-flex; align-items:center; justify-content:center; width:18px; height:18px; border-radius:50%; background:var(--grad);"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path></svg></span>
+          <span class="mono" style="font-size:10.5px; color:var(--ink2); letter-spacing:.1em;">INTEGRATIONS · AGENT FABRIC</span>
+        </div>
+        <h1 data-reveal style="font-size:clamp(38px,4.8vw,56px); line-height:1.05; letter-spacing:-.018em; margin:0 0 22px;">One fabric for every <span class="serif-i grad-text">system and agent.</span></h1>
+        <p data-reveal style="font-size:18.5px; color:var(--ink2); line-height:1.6; max-width:500px; margin:0 0 32px;">Connect Salesforce, ServiceNow, your data warehouse, and 250+ apps to Agent OS. Turn any API into agent-ready tools with native MCP and A2A — governed end to end.</p>
+        <div data-reveal style="display:flex; gap:13px; flex-wrap:wrap;">
+          <a href="Contact.dc.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--grad); color:#fff; font-weight:700; font-size:15px; padding:14px 26px; border-radius:99px; text-decoration:none; white-space:nowrap; box-shadow:var(--sh-brand);">Connect your stack <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="#catalog" style="color:var(--ink); font-weight:600; font-size:15px; padding:14px 22px; border-radius:99px; text-decoration:none; border:1px solid var(--rule2); background:rgba(255,255,255,.6); white-space:nowrap;">Browse connectors</a>
+        </div>
+      </div>
+      <!-- HUB & SPOKE VISUAL -->
+      <div data-reveal style="position:relative; display:flex; justify-content:center;">
+        <div style="position:relative; width:560px; height:450px; max-width:100%;">
+          {{ hubSvg }}
+          <div style="position:absolute; left:280px; top:225px; transform:translate(-50%,-50%); z-index:3; display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <span style="width:78px; height:78px; border-radius:20px; background:var(--grad); display:flex; align-items:center; justify-content:center; animation:hubPulse 3s ease-in-out infinite;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.2 7.3L21 12l-6.8 2.7L12 22l-2.2-7.3L3 12l6.8-2.7z"></path></svg></span>
+            <span class="mono" style="font-size:9.5px; letter-spacing:.12em; color:var(--ink); background:rgba(255,255,255,.8); padding:3px 9px; border-radius:99px; border:1px solid var(--rule);">AGENT OS</span>
+          </div>
+          <sc-for list="{{ spokes }}" as="s" hint-placeholder-count="8">
+            <div style="position:absolute; left:{{ s.x }}px; top:{{ s.y }}px; transform:translate(-50%,-50%); z-index:2; display:inline-flex; align-items:center; gap:8px; background:#fff; border:1px solid var(--rule); padding:9px 14px; border-radius:99px; box-shadow:var(--sh-card); white-space:nowrap;">
+              <span style="width:9px; height:9px; border-radius:50%; background:{{ s.dot }};"></span>
+              <span style="font-family:var(--font-ui); font-weight:600; font-size:13px; color:var(--ink);">{{ s.name }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section style="background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:36px 32px;">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div data-reveal><div class="serif grad-text" style="font-size:36px; line-height:1;">{{ s.v }}</div><div class="mono" style="font-size:9.5px; color:var(--mute); letter-spacing:.1em; margin-top:7px;">{{ s.l }}</div></div>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- CONNECTOR CATALOG -->
+  <section id="catalog" style="padding:96px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal style="max-width:600px; margin-bottom:48px;">
+        <span class="eyebrow">Connector catalog</span>
+        <h2 class="serif" style="font-size:42px; margin:16px 0 14px; line-height:1.05;">Pre-built for the tools <span class="serif-i grad-text">you already run.</span></h2>
+        <p style="font-size:16px; color:var(--ink2); line-height:1.6; margin:0;">Drop-in connectors across every category — activated in minutes, no custom code.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="6">
+          <div data-reveal style="background:var(--paper); border:1px solid var(--rule); border-radius:18px; padding:28px; box-shadow:var(--sh-card); transition:transform .18s var(--ease), box-shadow .18s var(--ease); display:flex; flex-direction:column;" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:18px;">
+              <span style="width:46px; height:46px; border-radius:12px; background:{{ c.grad }}; display:flex; align-items:center; justify-content:center; color:#fff;">{{ c.iconEl }}</span>
+              <span class="mono" style="font-size:9.5px; letter-spacing:.1em; color:var(--mute);">{{ c.count }}</span>
+            </div>
+            <h3 style="font-family:var(--font-ui); font-weight:700; font-size:18px; margin:0 0 14px; color:var(--ink);">{{ c.title }}</h3>
+            <div style="display:flex; flex-wrap:wrap; gap:7px;">
+              <sc-for list="{{ c.apps }}" as="a" hint-placeholder-count="3">
+                <span style="font-family:var(--font-ui); font-weight:600; font-size:12.5px; color:var(--ink2); background:var(--warm2); border:1px solid var(--rule); padding:6px 11px; border-radius:99px;">{{ a }}</span>
+              </sc-for>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE WAYS TO CONNECT -->
+  <section style="background:var(--warm); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:96px 32px;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div data-reveal style="text-align:center; max-width:600px; margin:0 auto 54px;">
+        <span class="eyebrow" style="justify-content:center;">How you connect</span>
+        <h2 class="serif" style="font-size:38px; margin:16px 0 0; line-height:1.1;">Three ways in. Zero lock-in.</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:20px;">
+        <sc-for list="{{ ways }}" as="w" hint-placeholder-count="3">
+          <div data-reveal style="background:var(--paper); border:1px solid var(--rule); border-radius:18px; padding:32px; position:relative; overflow:hidden;">
+            <div style="position:absolute; top:18px; right:24px; font-family:var(--font-display); font-size:60px; color:var(--warm2); line-height:1;">{{ w.n }}</div>
+            <span style="position:relative; width:44px; height:44px; border-radius:12px; background:{{ w.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:18px;">{{ w.iconEl }}</span>
+            <h3 style="position:relative; font-family:var(--font-ui); font-weight:700; font-size:19px; margin:0 0 10px; color:var(--ink);">{{ w.title }}</h3>
+            <p style="position:relative; font-size:13.5px; color:var(--ink2); line-height:1.6; margin:0;">{{ w.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENT PROTOCOLS -->
+  <section style="padding:96px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal style="max-width:620px; margin-bottom:48px;">
+        <span class="eyebrow">Agent-native protocols</span>
+        <h2 class="serif" style="font-size:42px; margin:16px 0 14px; line-height:1.05;">Every API becomes <span class="serif-i grad-text">an agent's tool.</span></h2>
+        <p style="font-size:16px; color:var(--ink2); line-height:1.6; margin:0;">Not just data pipes — Agent OS speaks the open standards that let agents act across systems and collaborate with each other.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
+        <sc-for list="{{ protocols }}" as="p" hint-placeholder-count="2">
+          <div data-reveal style="position:relative; background:var(--paper); border:1px solid {{ p.border }}; border-radius:22px; padding:36px; box-shadow:{{ p.shadow }}; overflow:hidden;">
+            <div style="position:absolute; top:-70px; right:-50px; width:200px; height:200px; border-radius:50%; background:{{ p.grad }}; filter:blur(80px); opacity:.14;"></div>
+            <div style="position:relative;">
+              <div style="display:inline-flex; align-items:center; gap:11px; margin-bottom:18px;"><span style="width:46px; height:46px; border-radius:13px; background:{{ p.grad }}; display:flex; align-items:center; justify-content:center; color:#fff;">{{ p.iconEl }}</span><span class="mono" style="font-size:11px; letter-spacing:.12em; color:var(--mute);">{{ p.tag }}</span></div>
+              <h3 style="font-family:var(--font-ui); font-weight:700; font-size:23px; letter-spacing:-.02em; margin:0 0 12px; color:var(--ink);">{{ p.title }}</h3>
+              <p style="font-size:14.5px; color:var(--ink2); line-height:1.6; margin:0 0 22px;">{{ p.body }}</p>
+              <div style="display:flex; flex-direction:column; gap:11px;">
+                <sc-for list="{{ p.points }}" as="pt" hint-placeholder-count="3">
+                  <div style="display:flex; align-items:center; gap:11px;"><span style="flex-shrink:0; width:20px; height:20px; border-radius:50%; background:var(--grad-soft); display:flex; align-items:center; justify-content:center;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span><span style="font-size:13.5px; font-weight:500; color:var(--ink2);">{{ pt }}</span></div>
+                </sc-for>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE BAND -->
+  <section style="padding:0 32px 90px;">
+    <div data-reveal style="position:relative; max-width:1160px; margin:0 auto; background:var(--ink); border-radius:28px; padding:60px 56px; overflow:hidden;">
+      <div style="position:absolute; top:-140px; right:-60px; width:520px; height:420px; background:var(--grad); filter:blur(120px); opacity:.34;"></div>
+      <div style="position:relative;">
+        <div style="max-width:560px; margin-bottom:42px;">
+          <span class="mono" style="font-size:10.5px; letter-spacing:.14em; color:#FF8FD0;">GOVERNANCE</span>
+          <h2 class="serif" style="font-size:36px; color:#fff; line-height:1.1; margin:14px 0 12px;">Every agent action — logged, permissioned, auditable.</h2>
+          <p style="font-size:15.5px; color:rgba(255,255,255,.66); line-height:1.6; margin:0;">A unified catalog and policy layer governs which agents reach which systems, with full observability over every call.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;">
+          <sc-for list="{{ governance }}" as="g" hint-placeholder-count="4">
+            <div>
+              <span style="display:flex; width:40px; height:40px; border-radius:11px; background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); align-items:center; justify-content:center; color:#fff; margin-bottom:14px;">{{ g.iconEl }}</span>
+              <h3 style="font-family:var(--font-ui); font-weight:700; font-size:15px; color:#fff; margin:0 0 7px;">{{ g.title }}</h3>
+              <p style="font-size:12.5px; color:rgba(255,255,255,.6); line-height:1.55; margin:0;">{{ g.body }}</p>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:10px 32px 90px;">
+    <div data-reveal style="position:relative; max-width:1160px; margin:0 auto; text-align:center;">
+      <h2 class="serif" style="font-size:44px; line-height:1.05; margin:0 0 16px;">Connect once. <span class="serif-i grad-text">Automate everywhere.</span></h2>
+      <p style="font-size:17px; color:var(--ink2); max-width:480px; margin:0 auto 30px; line-height:1.6;">Tell us your stack — we'll map the connectors and stand up your agent fabric in days.</p>
+      <a href="Contact.dc.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--grad); color:#fff; font-weight:700; font-size:15px; padding:15px 30px; border-radius:99px; text-decoration:none; box-shadow:var(--sh-brand);">Talk to an integration architect <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="platform" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const raw = (html, disp) => React.createElement('span', { style: { display: disp || 'contents' }, dangerouslySetInnerHTML: { __html: html } });
+    const ic = (p, sz, stroke) => `<svg width="${sz||20}" height="${sz||20}" viewBox="0 0 24 24" fill="none" stroke="${stroke||'#fff'}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+    const I = {
+      sparkle: '<path d="M12 2l2.2 7.3L21 12l-6.8 2.7L12 22l-2.2-7.3L3 12l6.8-2.7z"></path>',
+      users: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle>',
+      grid: '<rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect>',
+      database: '<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v14a9 3 0 0 0 18 0V5"></path><path d="M3 12a9 3 0 0 0 18 0"></path>',
+      message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>',
+      cart: '<circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>',
+      briefcase: '<rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>',
+      plug: '<path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"></path><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"></path>',
+      template: '<rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18M9 21V9"></path>',
+      code: '<polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>',
+      tool: '<path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.9 6.91a2.12 2.12 0 0 1-3-3l6.91-6.9a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>',
+      share: '<circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"></path>',
+      catalog: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>',
+      lock: '<rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path>',
+      eye: '<path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"></path><circle cx="12" cy="12" r="3"></circle>',
+      shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>',
+    };
+    const C = { indigo: '#1F3FCF', violet: '#6B1FB8', magenta: '#C7197A', ochre: '#C69A3A', green: '#2E9E6A' };
+    const G = { blue: 'var(--g-blue)', violet: 'var(--g-violet)', magenta: 'var(--g-magenta)', ochre: 'var(--g-ochre)', grad: 'var(--grad)', green: 'linear-gradient(135deg,#2E9E6A,#1F8A5B)', ink: 'var(--ink)' };
+
+    // ---- HUB & SPOKE ----
+    const cx = 280, cy = 225, rx = 210, ry = 178;
+    const spokeDefs = [
+      { name: 'Salesforce', dot: C.indigo }, { name: 'ServiceNow', dot: C.green }, { name: 'Snowflake', dot: C.violet }, { name: 'Stripe', dot: C.magenta },
+      { name: 'Slack', dot: C.ochre }, { name: 'Workday', dot: C.indigo }, { name: 'SAP', dot: C.green }, { name: 'Jira', dot: C.violet },
+    ];
+    const n = spokeDefs.length;
+    const spokes = spokeDefs.map((s, i) => {
+      const a = -Math.PI / 2 + (i * 2 * Math.PI / n);
+      return { ...s, x: Math.round(cx + rx * Math.cos(a)), y: Math.round(cy + ry * Math.sin(a)) };
+    });
+    const lines = spokes.map(s => `<line x1="${cx}" y1="${cy}" x2="${s.x}" y2="${s.y}" stroke="url(#ig)" stroke-width="1.6" opacity="0.5"/>`).join('');
+    const dots = spokes.map((s, i) => {
+      const inbound = i % 2 === 0;
+      const d = inbound ? `M${s.x},${s.y} L${cx},${cy}` : `M${cx},${cy} L${s.x},${s.y}`;
+      return `<circle r="3" fill="${s.dot}"><animateMotion dur="2.6s" begin="${(i * 0.28).toFixed(2)}s" repeatCount="indefinite" path="${d}"/></circle>`;
+    }).join('');
+    const hubSvg = raw(`<svg viewBox="0 0 560 450" width="560" height="450" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1;">
+      <defs><linearGradient id="ig" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F3FCF"/><stop offset="0.5" stop-color="#6B1FB8"/><stop offset="1" stop-color="#C7197A"/></linearGradient></defs>
+      ${lines}${dots}</svg>`, 'block');
+
+    const stats = [
+      { v: '250+', l: 'PRE-BUILT CONNECTORS' }, { v: 'MCP + A2A', l: 'NATIVE PROTOCOLS' },
+      { v: '99.99%', l: 'CONNECTOR UPTIME' }, { v: 'SOC 2', l: 'TYPE II CERTIFIED' },
+    ];
+
+    const cat = (grad, icon, title, count, apps) => ({ grad, iconEl: raw(ic(icon, 22), 'flex'), title, count, apps });
+    const categories = [
+      cat(G.blue, I.users, 'CRM & Sales', '32 CONNECTORS', ['Salesforce', 'HubSpot', 'Pipedrive', 'Zoho']),
+      cat(G.violet, I.grid, 'ITSM & Ops', '28 CONNECTORS', ['ServiceNow', 'Jira', 'PagerDuty', 'Zendesk']),
+      cat(G.magenta, I.database, 'Data & Warehouse', '24 CONNECTORS', ['Snowflake', 'Postgres', 'BigQuery', 'Databricks']),
+      cat(G.ochre, I.message, 'Communication', '30 CONNECTORS', ['Slack', 'Teams', 'Gmail', 'WhatsApp']),
+      cat(G.green, I.cart, 'Commerce & Billing', '22 CONNECTORS', ['Stripe', 'Shopify', 'Razorpay', 'NetSuite']),
+      cat(G.grad, I.briefcase, 'HR & Finance', '26 CONNECTORS', ['Workday', 'SAP', 'BambooHR', 'QuickBooks']),
+    ];
+
+    const way = (n, grad, icon, title, body) => ({ n, grad, iconEl: raw(ic(icon, 20), 'flex'), title, body });
+    const ways = [
+      way('01', G.blue, I.plug, 'Pre-built connectors', 'Activate a connector and authenticate once. Drop it into any workflow as a ready-made action — no code, no maintenance.'),
+      way('02', G.violet, I.template, 'Flow templates', 'Start from guided templates for common patterns — lead sync, ticket routing, record updates — and tune them to your process.'),
+      way('03', G.magenta, I.code, 'Custom API & SDK', 'Reach anything with REST, GraphQL, or our SDK. Build a custom connector once and reuse it across every agent and flow.'),
+    ];
+
+    const aiBorder = 'rgba(199,25,122,.3)';
+    const aiShadow = '0 0 0 1px rgba(199,25,122,.1), 0 16px 40px rgba(14,10,20,.08)';
+    const protocols = [
+      { tag: 'MODEL CONTEXT PROTOCOL', title: 'Turn any API into agent tools', grad: G.grad, border: aiBorder, shadow: aiShadow, iconEl: raw(ic(I.tool, 20), 'flex'),
+        body: 'Every connector is automatically exposed as an MCP tool, so your agents can call it with governed, permissioned access — no glue code.',
+        points: ['Any REST or GraphQL API becomes a callable tool', 'Per-agent scopes and rate limits', 'Works with Agent OS and third-party agents alike'] },
+      { tag: 'AGENT2AGENT (A2A)', title: 'Let agents collaborate', grad: G.violet, border: 'var(--rule)', shadow: 'var(--sh-card)', iconEl: raw(ic(I.share, 20), 'flex'),
+        body: 'Agents discover and delegate to one another across systems and vendors — an observability agent can hand off to a triage agent automatically.',
+        points: ['Open A2A protocol for discovery & delegation', 'Multi-agent workflows across vendors', 'Every handoff governed and traced'] },
+    ];
+
+    const gov = (icon, title, body) => ({ iconEl: raw(ic(icon, 19), 'flex'), title, body });
+    const governance = [
+      gov(I.catalog, 'Unified catalog', 'One registry of every API, connector, and agent-ready service.'),
+      gov(I.lock, 'Secure access', 'Granular policies decide which agents reach which systems.'),
+      gov(I.eye, 'Full observability', 'Trace every agent call end to end, with usage analytics.'),
+      gov(I.shield, 'Enterprise-grade', 'SOC 2, encryption in transit & at rest, and audit logs.'),
+    ];
+
+    return { hubSvg, spokes, stats, categories, ways, protocols, governance };
+  }
+}
+</script>
+</body>
+</html>

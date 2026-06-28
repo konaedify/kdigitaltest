@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <style>
+    .nav-desktop { display:flex; align-items:center; }
+    .nav-burger { display:none; }
+    @media (max-width:920px) {
+      .nav-desktop { display:none !important; }
+      .nav-burger { display:inline-flex !important; }
+    }
+    @keyframes navDrawerIn { from { opacity:0; transform:translateY(-8px); } to { opacity:1; transform:none; } }
+  </style>
+</helmet>
+<nav style="position:fixed; top:0; left:0; right:0; z-index:100; display:flex; justify-content:center; padding:{{ navPad }}; transition:padding .3s var(--ease);">
+  <div style="{{ shellStyle }}">
+    <a href="Home.dc.html" style="display:flex; align-items:center; text-decoration:none; flex-shrink:0;">
+      <img src="uploads/logo.webp" alt="KDigital" style="height:27px; width:auto; display:block;">
+    </a>
+    <div class="nav-desktop" style="gap:1px; margin-left:14px;">
+      <sc-for list="{{ items }}" as="item" hint-placeholder-count="5">
+        <div style="position:relative;" onMouseEnter="{{ item.onEnter }}" onMouseLeave="{{ onLeave }}">
+          <a href="{{ item.href }}" style="{{ item.style }}">{{ item.label }}{{ item.chevronEl }}</a>
+          <sc-if value="{{ item.open }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; top:100%; left:0; padding-top:14px;" onMouseEnter="{{ item.onEnter }}" onMouseLeave="{{ onLeave }}">
+              <div style="{{ item.panelStyle }}">
+                <sc-for list="{{ item.menu }}" as="sub" hint-placeholder-count="4">
+                  <a href="{{ sub.href }}" style="display:block; padding:10px 12px; border-radius:10px; text-decoration:none; transition:background .13s var(--ease);" style-hover="background:var(--warm2);">
+                    <div style="font-family:var(--font-ui); font-weight:700; font-size:13.5px; color:var(--ink);">{{ sub.label }}</div>
+                    <div style="font-size:12px; color:var(--mute); line-height:1.4; margin-top:2px;">{{ sub.desc }}</div>
+                  </a>
+                </sc-for>
+              </div>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+    <div style="flex:1;"></div>
+    <a class="nav-desktop" href="Contact.dc.html" style="gap:7px; font-family:var(--font-ui); font-weight:700; font-size:13.5px; color:#fff; background:var(--grad); padding:10px 18px; border-radius:99px; text-decoration:none; white-space:nowrap; box-shadow:var(--sh-brand); transition:transform .15s var(--ease), box-shadow .15s var(--ease);" style-hover="transform:translateY(-1px); box-shadow:0 8px 20px rgba(107,31,184,.45);">
+      Book a demo
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+    </a>
+    <button class="nav-burger" onClick="{{ toggleMobile }}" aria-label="Menu" style="width:42px; height:42px; border-radius:12px; border:1px solid var(--rule); background:rgba(255,255,255,.7); align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;">{{ burgerEl }}</button>
+  </div>
+</nav>
+<sc-if value="{{ mobileOpen }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed; inset:0; z-index:200; background:var(--canvas); display:flex; flex-direction:column; animation:navDrawerIn .25s var(--ease) both;">
+    <div style="display:flex; align-items:center; justify-content:space-between; padding:20px 22px; border-bottom:1px solid var(--rule); flex-shrink:0;">
+      <a href="Home.dc.html" style="display:flex; align-items:center;"><img src="uploads/logo.webp" alt="KDigital" style="height:26px; width:auto;"></a>
+      <button onClick="{{ toggleMobile }}" aria-label="Close" style="width:42px; height:42px; border-radius:12px; border:1px solid var(--rule); background:#fff; display:flex; align-items:center; justify-content:center; cursor:pointer;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"></path></svg></button>
+    </div>
+    <div style="flex:1; overflow-y:auto; padding:12px 18px 28px;">
+      <sc-for list="{{ mobileItems }}" as="m" hint-placeholder-count="7">
+        <div style="border-bottom:1px solid var(--rule);">
+          <button onClick="{{ m.onToggle }}" style="width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px; background:none; border:none; cursor:pointer; padding:17px 6px; font-family:var(--font-ui); font-weight:700; font-size:17px; color:var(--ink); text-align:left;">{{ m.label }}<span style="{{ m.chevStyle }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--mute)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg></span></button>
+          <sc-if value="{{ m.open }}" hint-placeholder-val="{{ false }}">
+            <div style="display:flex; flex-direction:column; gap:2px; padding:0 6px 14px;">
+              <sc-for list="{{ m.menu }}" as="sub" hint-placeholder-count="4">
+                <a href="{{ sub.href }}" style="display:block; padding:11px 14px; border-radius:11px; text-decoration:none; background:var(--paper); border:1px solid var(--rule);">
+                  <span style="font-family:var(--font-ui); font-weight:600; font-size:14.5px; color:var(--ink2);">{{ sub.label }}</span>
+                </a>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+      <a href="Contact.dc.html" style="display:flex; align-items:center; justify-content:center; gap:8px; margin-top:24px; font-family:var(--font-ui); font-weight:700; font-size:16px; color:#fff; background:var(--grad); padding:16px; border-radius:99px; text-decoration:none; box-shadow:var(--sh-brand);">Book a demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </div>
+</sc-if>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1180,&quot;height&quot;:90},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;home&quot;,&quot;platform&quot;,&quot;products&quot;,&quot;solutions&quot;,&quot;services&quot;,&quot;resources&quot;,&quot;company&quot;,&quot;contact&quot;],&quot;default&quot;:&quot;home&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { scrolled: false, open: null, mobileOpen: false, mobileExpanded: null };
+  componentDidMount() {
+    this._onScroll = () => { const s = window.scrollY > 24; if (s !== this.state.scrolled) this.setState({ scrolled: s }); };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); clearTimeout(this._t); }
+  openMenu(k) { clearTimeout(this._t); if (this.state.open !== k) this.setState({ open: k }); }
+  closeMenu() { this._t = setTimeout(() => this.setState({ open: null }), 140); }
+  toggleMobile() { this.setState(s => ({ mobileOpen: !s.mobileOpen, mobileExpanded: null })); }
+  toggleSection(k) { this.setState(s => ({ mobileExpanded: s.mobileExpanded === k ? null : k })); }
+  renderVals() {
+    const raw = (html) => React.createElement('span', { style: { display: 'flex' }, dangerouslySetInnerHTML: { __html: html } });
+    const chev = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="opacity:.6;"><path d="M6 9l6 6 6-6"></path></svg>';
+    const burger = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"></path></svg>';
+    const active = this.props.active || 'home';
+    const sc = this.state.scrolled;
+
+    const def = [
+      { label: 'Platform', key: 'platform', href: 'Platform.dc.html', wide: false, menu: [
+        { label: 'Agent OS', desc: 'The agentic core', href: 'Platform.dc.html' },
+        { label: 'How it works', desc: 'Perceive · reason · act · learn', href: 'Platform.dc.html#engines' },
+        { label: 'Workflows', desc: 'Visual agent automation', href: 'Workflows.dc.html' },
+        { label: 'Integrations', desc: 'Connect your whole stack', href: 'Integrations.dc.html' },
+        { label: 'Security', desc: 'Enterprise-grade by default', href: 'Security.dc.html' },
+      ]},
+      { label: 'Products', key: 'products', href: 'Platform.dc.html#products', wide: false, menu: [
+        { label: 'Kona CRM', desc: 'Agentic sales & admissions', href: 'KonaCRM.dc.html' },
+        { label: 'Kona LMS', desc: 'Adaptive, personalized learning', href: 'KonaLMS.dc.html' },
+        { label: 'Commerce AI', desc: 'Conversion & retention', href: 'CommerceAI.dc.html' },
+      ]},
+      { label: 'Solutions', key: 'solutions', href: 'Solutions.dc.html', wide: true, menu: [
+        { label: 'Education', desc: 'Cohorts & admissions', href: 'Industry.dc.html?ind=education' },
+        { label: 'Healthcare', desc: 'Patient engagement', href: 'Industry.dc.html?ind=healthcare' },
+        { label: 'Retail & E-Commerce', desc: 'Conversion & loyalty', href: 'Industry.dc.html?ind=retail' },
+        { label: 'Real Estate', desc: 'Leads & buyer insight', href: 'Industry.dc.html?ind=realestate' },
+        { label: 'Financial Services', desc: 'Client growth', href: 'Industry.dc.html?ind=finance' },
+        { label: 'Government', desc: 'Citizen services', href: 'Industry.dc.html?ind=government' },
+      ]},
+      { label: 'Services', key: 'services', href: 'Services.dc.html', wide: false, menu: [
+        { label: 'Salesforce', desc: 'Staffing & implementation', href: 'Salesforce.dc.html' },
+        { label: 'ServiceNow', desc: 'Staffing & implementation', href: 'ServiceNow.dc.html' },
+        { label: 'Full AI Stack', desc: 'Staffing & implementation', href: 'Services.dc.html' },
+        { label: 'Marketing', desc: 'Full-funnel, AI-accelerated', href: 'Marketing.dc.html' },
+      ]},
+      { label: 'Resources', key: 'resources', href: 'Resources.dc.html', wide: false, menu: [
+        { label: 'Blog', desc: 'Playbooks & field notes', href: 'Resources.dc.html' },
+        { label: 'Customer stories', desc: 'Agents in the wild', href: 'CustomerStories.dc.html' },
+        { label: 'Documentation', desc: 'Guides, APIs & integrations', href: 'Resources.dc.html' },
+      ]},
+      { label: 'Company', key: 'company', href: 'Company.dc.html', wide: false, menu: [
+        { label: 'About', desc: 'Who we are', href: 'Company.dc.html' },
+        { label: 'Careers', desc: 'Build with us', href: 'Company.dc.html' },
+        { label: 'Contact', desc: 'Talk to our team', href: 'Contact.dc.html' },
+      ]},
+    ];
+
+    const panelBase = 'background:rgba(255,255,255,.98); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border:1px solid var(--rule); border-radius:16px; box-shadow:0 18px 44px rgba(14,10,20,.13); padding:8px;';
+    const items = def.map(it => {
+      const on = it.key === active;
+      return {
+        ...it,
+        open: this.state.open === it.key,
+        onEnter: () => this.openMenu(it.key),
+        chevronEl: raw(chev),
+        panelStyle: it.wide
+          ? `${panelBase} display:grid; grid-template-columns:1fr 1fr; gap:2px; width:440px;`
+          : `${panelBase} display:flex; flex-direction:column; gap:2px; min-width:260px;`,
+        style: `font-family:var(--font-ui); font-weight:600; font-size:13.5px; text-decoration:none; white-space:nowrap; padding:8px 12px; border-radius:99px; display:inline-flex; align-items:center; gap:5px; transition:all .15s var(--ease); cursor:pointer; color:${on ? 'var(--violet)' : 'var(--ink2)'}; background:${on ? 'var(--warm2)' : 'transparent'};`,
+      };
+    });
+
+    const mobileItems = def.map(it => {
+      const open = this.state.mobileExpanded === it.key;
+      return {
+        ...it, open,
+        onToggle: () => this.toggleSection(it.key),
+        chevStyle: `display:flex; transition:transform .2s var(--ease); transform:rotate(${open ? 180 : 0}deg);`,
+      };
+    });
+
+    const shellStyle = `display:flex; align-items:center; gap:8px; width:100%; max-width:1180px; padding:9px 12px 9px 18px; border-radius:99px; transition:all .3s var(--ease); background:${sc ? 'rgba(251,247,241,.85)' : 'rgba(251,247,241,0)'}; backdrop-filter:${sc ? 'blur(14px) saturate(1.4)' : 'blur(0px)'}; -webkit-backdrop-filter:${sc ? 'blur(14px) saturate(1.4)' : 'none'}; border:1px solid ${sc ? 'var(--rule)' : 'transparent'}; box-shadow:${sc ? '0 8px 30px rgba(14,10,20,.07)' : 'none'};`;
+    return {
+      items, mobileItems, onLeave: () => this.closeMenu(), shellStyle,
+      navPad: sc ? '12px 24px' : '20px 24px',
+      burgerEl: raw(burger), toggleMobile: () => this.toggleMobile(), mobileOpen: this.state.mobileOpen,
+    };
+  }
+}
+</script>
+</body>
+</html>

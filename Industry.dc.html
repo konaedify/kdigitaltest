@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Industry solutions | KDigital</title>
+  <meta name="description" content="AI agents tuned to your industry’s workflows, language, and metrics. See the use cases, outcomes, and the products behind them.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0A14">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KDigital">
+  <meta property="og:title" content="Industry solutions | KDigital">
+  <meta property="og:description" content="AI agents tuned to your industry’s workflows, language, and metrics. See the use cases, outcomes, and the products behind them.">
+  <meta property="og:image" content="https://www.kdigital.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Industry solutions | KDigital">
+  <meta name="twitter:description" content="AI agents tuned to your industry’s workflows, language, and metrics. See the use cases, outcomes, and the products behind them.">
+  <meta name="twitter:image" content="https://www.kdigital.ai/og-image.png">
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes auroraA { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(50px,30px) scale(1.12); } }
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-40px,20px) scale(1.1); } }
+    @keyframes pulseDot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.4; transform:scale(.85); } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+    @supports (animation-timeline: view()) { [data-reveal] { animation:revealKf .9s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 62%; } }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden;">
+
+  <!-- HERO -->
+  <section style="position:relative; padding:150px 32px 70px; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.05) 1px, transparent 1px); background-size:22px 22px; -webkit-mask-image:radial-gradient(ellipse at 60% 38%, #000 32%, transparent 78%); mask-image:radial-gradient(ellipse at 60% 38%, #000 32%, transparent 78%);"></div>
+    <div style="position:absolute; top:-150px; left:-100px; width:520px; height:520px; border-radius:50%; background:{{ d.glowA }}; filter:blur(60px); animation:auroraA 18s ease-in-out infinite;"></div>
+    <div style="position:absolute; top:-20px; right:-140px; width:560px; height:560px; border-radius:50%; background:{{ d.glowB }}; filter:blur(60px); animation:auroraB 21s ease-in-out infinite;"></div>
+    <div style="position:relative; z-index:2; max-width:1160px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:52px; align-items:center;">
+      <div>
+        <div data-reveal style="display:inline-flex; align-items:center; gap:10px; margin-bottom:22px;">
+          <a href="Solutions.dc.html" class="mono" style="font-size:10.5px; color:var(--mute); letter-spacing:.1em; text-decoration:none;">SOLUTIONS</a>
+          <span class="mono" style="font-size:10.5px; color:var(--hint);">/</span>
+          <span class="mono" style="font-size:10.5px; color:var(--violet); letter-spacing:.1em;">{{ d.tag }}</span>
+        </div>
+        <div data-reveal style="display:inline-flex; align-items:center; gap:11px; margin-bottom:18px;">
+          <span style="width:46px; height:46px; border-radius:13px; background:{{ d.grad }}; display:flex; align-items:center; justify-content:center; color:#fff;">{{ d.iconEl }}</span>
+          <span style="font-family:var(--font-ui); font-weight:700; font-size:17px; color:var(--ink);">{{ d.name }}</span>
+        </div>
+        <h1 data-reveal style="font-size:clamp(36px,4.6vw,54px); line-height:1.06; letter-spacing:-.018em; margin:0 0 20px;">{{ d.h1a }}<span class="serif-i grad-text">{{ d.h1b }}</span></h1>
+        <p data-reveal style="font-size:18px; color:var(--ink2); line-height:1.6; max-width:500px; margin:0 0 32px;">{{ d.sub }}</p>
+        <div data-reveal style="display:flex; gap:13px; flex-wrap:wrap;">
+          <a href="Contact.dc.html" style="display:inline-flex; align-items:center; gap:8px; background:var(--grad); color:#fff; font-weight:700; font-size:15px; padding:14px 26px; border-radius:99px; text-decoration:none; white-space:nowrap; box-shadow:var(--sh-brand);">Book a demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="#usecases" style="color:var(--ink); font-weight:600; font-size:15px; padding:14px 22px; border-radius:99px; text-decoration:none; border:1px solid var(--rule2); background:rgba(255,255,255,.6); white-space:nowrap;">See use cases</a>
+        </div>
+      </div>
+      <div data-reveal style="position:relative;">
+        <div style="background:#fff; border:1px solid var(--rule); border-radius:18px; box-shadow:0 30px 70px rgba(14,10,20,.13); overflow:hidden;">
+          <div style="display:flex; align-items:center; gap:10px; padding:14px 18px; border-bottom:1px solid var(--rule); background:var(--warm);">
+            <span style="width:8px; height:8px; border-radius:50%; background:#2E9E6A; animation:pulseDot 2s ease-in-out infinite;"></span>
+            <span class="mono" style="font-size:10px; color:var(--mute); letter-spacing:.1em;">{{ d.panelLabel }}</span>
+          </div>
+          <div style="padding:24px; display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <sc-for list="{{ d.stats }}" as="s" hint-placeholder-count="4">
+              <div style="background:{{ s.bg }}; border:1px solid {{ s.bd }}; border-radius:14px; padding:18px;">
+                <div class="serif grad-text" style="font-size:32px; line-height:1;">{{ s.v }}</div>
+                <div class="mono" style="font-size:8.5px; color:var(--mute); letter-spacing:.08em; margin-top:8px;">{{ s.l }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHALLENGE -->
+  <section style="background:var(--paper); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:80px 32px;">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:.9fr 1.1fr; gap:48px; align-items:center;">
+      <div data-reveal>
+        <span class="eyebrow">The challenge</span>
+        <h2 class="serif" style="font-size:34px; margin:16px 0 0; line-height:1.12;">{{ d.challengeH }}</h2>
+      </div>
+      <p data-reveal style="font-size:16px; color:var(--ink2); line-height:1.7; margin:0;">{{ d.challengeP }}</p>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section id="usecases" style="padding:96px 32px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal style="max-width:600px; margin-bottom:48px;">
+        <span class="eyebrow">What we automate</span>
+        <h2 class="serif" style="font-size:42px; margin:16px 0 14px; line-height:1.05;">{{ d.useH1 }}<span class="serif-i grad-text">{{ d.useH2 }}</span></h2>
+        <p style="font-size:16px; color:var(--ink2); line-height:1.6; margin:0;">{{ d.useSub }}</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:18px;">
+        <sc-for list="{{ d.cases }}" as="c" hint-placeholder-count="4">
+          <div data-reveal style="background:var(--paper); border:1px solid var(--rule); border-radius:18px; padding:26px; box-shadow:var(--sh-card); transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+            <span style="width:46px; height:46px; border-radius:12px; background:{{ c.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:16px;">{{ c.iconEl }}</span>
+            <h3 style="font-family:var(--font-ui); font-weight:700; font-size:16px; margin:0 0 7px; color:var(--ink);">{{ c.title }}</h3>
+            <p style="font-size:13px; color:var(--ink2); line-height:1.55; margin:0;">{{ c.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCT TIE-IN -->
+  <section style="background:var(--warm); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:80px 32px;">
+    <div data-reveal style="max-width:1100px; margin:0 auto; background:var(--paper); border:1px solid var(--rule); border-radius:22px; padding:44px; box-shadow:var(--sh-card); display:flex; align-items:center; gap:36px; flex-wrap:wrap;">
+      <span style="width:60px; height:60px; border-radius:16px; background:{{ d.grad }}; display:flex; align-items:center; justify-content:center; color:#fff; flex-shrink:0;">{{ d.prodIconEl }}</span>
+      <div style="flex:1; min-width:260px;">
+        <div class="mono" style="font-size:10px; letter-spacing:.12em; color:var(--violet); margin-bottom:8px;">POWERED BY {{ d.prodKicker }}</div>
+        <h3 class="serif" style="font-size:26px; margin:0 0 8px; line-height:1.15;">{{ d.prodTitle }}</h3>
+        <p style="font-size:14.5px; color:var(--ink2); line-height:1.6; margin:0;">{{ d.prodBody }}</p>
+      </div>
+      <a href="{{ d.prodHref }}" style="display:inline-flex; align-items:center; gap:8px; background:var(--ink); color:#fff; font-weight:700; font-size:14px; padding:13px 24px; border-radius:99px; text-decoration:none; white-space:nowrap;">{{ d.prodCta }} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+    </div>
+  </section>
+
+  <!-- OTHER INDUSTRIES -->
+  <section style="padding:80px 32px 30px;">
+    <div style="max-width:1160px; margin:0 auto;">
+      <div data-reveal style="margin-bottom:28px;"><span class="eyebrow">More industries</span></div>
+      <div data-reveal style="display:flex; gap:12px; flex-wrap:wrap;">
+        <sc-for list="{{ others }}" as="o" hint-placeholder-count="5">
+          <a href="{{ o.href }}" style="display:inline-flex; align-items:center; gap:10px; background:var(--paper); border:1px solid var(--rule); padding:12px 18px; border-radius:99px; text-decoration:none; box-shadow:var(--sh-card); transition:transform .15s var(--ease);" style-hover="transform:translateY(-2px);">
+            <span style="width:28px; height:28px; border-radius:8px; background:{{ o.grad }}; display:flex; align-items:center; justify-content:center; color:#fff;">{{ o.iconEl }}</span>
+            <span style="font-family:var(--font-ui); font-weight:700; font-size:14px; color:var(--ink);">{{ o.name }}</span>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:50px 32px 90px;">
+    <div data-reveal style="position:relative; max-width:1160px; margin:0 auto; background:var(--ink); border-radius:28px; padding:76px 56px; overflow:hidden; text-align:center;">
+      <div style="position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:680px; height:420px; background:var(--grad); filter:blur(120px); opacity:.4;"></div>
+      <div style="position:relative;">
+        <h2 class="serif" style="font-size:44px; color:#fff; line-height:1.05; margin:0 0 18px;">{{ d.ctaA }}<span class="serif-i" style="background:linear-gradient(120deg,#7da0ff,#ff8fd0); -webkit-background-clip:text; background-clip:text; color:transparent;">{{ d.ctaB }}</span></h2>
+        <p style="font-size:17px; color:rgba(255,255,255,.7); max-width:470px; margin:0 auto 32px; line-height:1.6;">{{ d.ctaSub }}</p>
+        <a href="Contact.dc.html" style="background:#fff; color:var(--ink); font-weight:700; font-size:15px; padding:15px 30px; border-radius:99px; text-decoration:none;">Book a demo</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="solutions" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const raw = (html, disp) => React.createElement('span', { style: { display: disp || 'contents' }, dangerouslySetInnerHTML: { __html: html } });
+    const ic = (p, sz) => `<svg width="${sz||22}" height="${sz||22}" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+    const I = {
+      cap: '<path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path>',
+      heart: '<path d="M12 21s-8-4.5-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 6.5-8 11-8 11z"></path>',
+      cart: '<circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>',
+      home: '<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path>',
+      dollar: '<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>',
+      gov: '<path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"></path>',
+      sparkle: '<path d="M12 2l2.2 7.3L21 12l-6.8 2.7L12 22l-2.2-7.3L3 12l6.8-2.7z"></path>',
+      plane: '<path d="M22 2L11 13"></path><path d="M22 2l-7 20-4-9-9-4 20-7z"></path>',
+      calendar: '<rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path>',
+      route: '<circle cx="6" cy="19" r="3"></circle><circle cx="18" cy="5" r="3"></circle><path d="M9 19h6a3 3 0 0 0 3-3V8"></path>',
+      alert: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><path d="M12 9v4M12 17h.01"></path>',
+      bell: '<path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path>',
+      message: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>',
+      target: '<circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle>',
+      box: '<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>',
+      users: '<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle>',
+      repeat: '<path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path>',
+      search: '<circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.3-4.3"></path>',
+      shield: '<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>',
+      doc: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6"></path>',
+      globe: '<circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"></path>',
+      handshake: '<path d="M11 17l2 2a1 1 0 0 0 3-3"></path><path d="M14 14l2.5 2.5a1 1 0 0 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 0 1-1.42 0l-2.62-2.62a1 1 0 0 0-1.41 0L3 9.5"></path>',
+    };
+    const G = { blue: 'var(--g-blue)', violet: 'var(--g-violet)', magenta: 'var(--g-magenta)', ochre: 'var(--g-ochre)', green: 'linear-gradient(135deg,#2E9E6A,#1F8A5B)' };
+    const sb = (bg, bd) => ({ bg, bd });
+    const soft = sb('var(--grad-soft)', 'rgba(107,31,184,.18)');
+    const warm = sb('var(--warm)', 'var(--rule)');
+    const cs = (grad, icon, title, body) => ({ grad, icon, title, body });
+
+    const DB = {
+      education: {
+        name: 'Education', tag: 'COHORTS · ADMISSIONS', grad: G.blue, icon: I.cap,
+        glowA: 'radial-gradient(circle, rgba(31,63,207,.18), transparent 65%)', glowB: 'radial-gradient(circle, rgba(107,31,184,.14), transparent 65%)',
+        h1a: 'Fill every cohort, ', h1b: 'keep every learner.',
+        sub: 'From first enquiry to graduation, agents run admissions and personalize learning — so counsellors focus on students, not spreadsheets.',
+        panelLabel: 'ADMISSIONS · LIVE',
+        stats: [{ v: '3.2×', l: 'FASTER ENROLMENT' }, { v: '−28%', l: 'DROP-OFF' }, { v: '+50%', l: 'QUALIFIED LEADS' }, { v: '24/7', l: 'APPLICANT RESPONSE' }],
+        challengeH: 'Leads go cold and learners slip away — quietly.',
+        challengeP: 'Education teams juggle thousands of enquiries while supporting active cohorts. Counsellors can\u2019t follow up fast enough, and at-risk learners often go unnoticed until they\u2019ve already dropped. KDigital\u2019s agents close both gaps — chasing every lead the moment it goes hot, and watching each learner\u2019s progress for early signs of trouble.',
+        useH1: 'Admissions and learning, ', useH2: 'on autopilot.', useSub: 'Agents own the repetitive work end to end, with counsellors approving the moments that matter.',
+        cases: [
+          cs(G.blue, I.sparkle, 'Lead scoring', 'Every enquiry scored and ranked by intent and fit, in real time.'),
+          cs(G.violet, I.plane, 'Application nudges', 'Personalized follow-ups that move applicants from interest to enrolment.'),
+          cs(G.magenta, I.route, 'Adaptive learning', 'Paths that reshape to each learner\u2019s pace and gaps.'),
+          cs(G.ochre, I.alert, 'At-risk alerts', 'Spot learners likely to drop and intervene before they do.'),
+        ],
+        prodKicker: 'KONA CRM + LMS', prodIcon: I.cap, prodTitle: 'Kona CRM for admissions, Kona LMS for outcomes',
+        prodBody: 'Run your enrolment pipeline and your learning programs on one agentic platform — the same one Digital Edify uses to fill its own cohorts.',
+        prodHref: 'KonaCRM.dc.html', prodCta: 'Explore Kona CRM',
+        ctaA: 'Grow enrolments ', ctaB: 'without growing the team.', ctaSub: 'See the admissions and tutor agents working a real cohort.',
+      },
+      healthcare: {
+        name: 'Healthcare', tag: 'PATIENT ENGAGEMENT', grad: G.magenta, icon: I.heart,
+        glowA: 'radial-gradient(circle, rgba(199,25,122,.18), transparent 65%)', glowB: 'radial-gradient(circle, rgba(31,63,207,.13), transparent 65%)',
+        h1a: 'More care, ', h1b: 'less coordination.',
+        sub: 'Agents handle reminders, intake, and follow-ups across channels — so clinical staff spend their time on patients, not phone tag.',
+        panelLabel: 'PATIENT OPS · LIVE',
+        stats: [{ v: '−40%', l: 'NO-SHOWS' }, { v: '24/7', l: 'PATIENT RESPONSE' }, { v: '−45%', l: 'RESPONSE TIME' }, { v: '+30%', l: 'ADHERENCE' }],
+        challengeH: 'Admin overload steals time from care.',
+        challengeP: 'Front-desk teams drown in reminders, intake forms, and follow-up calls, while patients wait on hold and miss appointments. KDigital\u2019s agents automate the routine coordination — confirming visits, triaging intake, and nudging adherence — with every action logged and a human in the loop for anything clinical.',
+        useH1: 'Patient engagement, ', useH2: 'handled.', useSub: 'Routine outreach runs itself, freeing staff for the work only they can do.',
+        cases: [
+          cs(G.magenta, I.bell, 'Appointment reminders', 'Multi-channel reminders that cut no-shows automatically.'),
+          cs(G.blue, I.message, 'Smart intake', 'Collect and triage intake, routing each case to the right team.'),
+          cs(G.violet, I.repeat, 'Adherence nudges', 'Timely follow-ups that keep patients on their care plan.'),
+          cs(G.ochre, I.shield, 'Compliant by default', 'PII redaction, consent, and audit trails built in.'),
+        ],
+        prodKicker: 'AGENT OS', prodIcon: I.sparkle, prodTitle: 'Built on a governed Agent OS',
+        prodBody: 'Every patient interaction runs inside a trust layer — scoped permissions, data residency, and full audit — so automation never compromises compliance.',
+        prodHref: 'Security.dc.html', prodCta: 'See our security',
+        ctaA: 'Give your staff ', ctaB: 'their time back.', ctaSub: 'See patient-engagement agents run in a guided walkthrough.',
+      },
+      retail: {
+        name: 'Retail & E-Commerce', tag: 'CONVERSION · LOYALTY', grad: G.violet, icon: I.cart,
+        glowA: 'radial-gradient(circle, rgba(107,31,184,.18), transparent 65%)', glowB: 'radial-gradient(circle, rgba(199,25,122,.14), transparent 65%)',
+        h1a: 'Turn more visits ', h1b: 'into revenue.',
+        sub: 'Personalized recommendations, smart inventory, and automated cart recovery work the whole funnel — so growth doesn\u2019t depend on more headcount.',
+        panelLabel: 'STORE · LIVE',
+        stats: [{ v: '+27%', l: 'CONVERSION' }, { v: '312', l: 'CARTS / DAY RECOVERED' }, { v: '+24%', l: 'REPEAT PURCHASE' }, { v: '+15%', l: 'AVG ORDER VALUE' }],
+        challengeH: 'Traffic comes in. Revenue leaks out.',
+        challengeP: 'Most stores convert a fraction of their visitors, lose carts at checkout, and struggle to bring buyers back. KDigital\u2019s Commerce AI works every stage — personalizing discovery, recovering carts on the right channel, and running lifecycle journeys — so more of the traffic you already have turns into sales.',
+        useH1: 'Revenue at ', useH2: 'every step.', useSub: 'Discovery to repeat purchase, agents close the gaps that cost you sales.',
+        cases: [
+          cs(G.violet, I.target, 'Personalized recs', 'Every shopper sees what\u2019s most likely to convert for them.'),
+          cs(G.magenta, I.cart, 'Cart recovery', 'Win-back offers on the channel each shopper prefers.'),
+          cs(G.blue, I.box, 'Smart inventory', 'Demand forecasting that prevents costly stockouts.'),
+          cs(G.ochre, I.repeat, 'Lifecycle journeys', 'Automated replenish and loyalty flows that lift LTV.'),
+        ],
+        prodKicker: 'COMMERCE AI', prodIcon: I.cart, prodTitle: 'Commerce AI plugs into your store',
+        prodBody: 'Connects to Shopify, WooCommerce, and custom stacks — and starts optimizing conversion, recovery, and retention from day one.',
+        prodHref: 'CommerceAI.dc.html', prodCta: 'Explore Commerce AI',
+        ctaA: 'Grow revenue ', ctaB: 'without growing headcount.', ctaSub: 'See Commerce AI run on your catalog in a live walkthrough.',
+      },
+      realestate: {
+        name: 'Real Estate', tag: 'LEADS · BUYER INSIGHT', grad: G.ochre, icon: I.home,
+        glowA: 'radial-gradient(circle, rgba(198,154,58,.18), transparent 65%)', glowB: 'radial-gradient(circle, rgba(107,31,184,.13), transparent 65%)',
+        h1a: 'Never let a hot lead ', h1b: 'go cold.',
+        sub: 'Agents qualify every enquiry, match buyers to listings, and keep deals moving with timely follow-ups — so your team works only the leads worth their time.',
+        panelLabel: 'PIPELINE · LIVE',
+        stats: [{ v: '2.6×', l: 'QUALIFIED LEADS' }, { v: '−35%', l: 'TIME TO CLOSE' }, { v: '24/7', l: 'ENQUIRY RESPONSE' }, { v: '+40%', l: 'VIEWINGS BOOKED' }],
+        challengeH: 'Speed wins deals — and most teams are slow.',
+        challengeP: 'Property buyers enquire across portals at all hours, and the first agent to respond usually wins. But teams can\u2019t answer instantly or chase every lead. KDigital\u2019s agents reply the moment an enquiry lands, qualify intent, match buyers to the right listings, and book viewings — keeping every deal moving.',
+        useH1: 'Lead to keys, ', useH2: 'managed.', useSub: 'Agents do the chasing and matching; your team does the closing.',
+        cases: [
+          cs(G.ochre, I.sparkle, 'Enquiry qualification', 'Instant replies that qualify intent and budget.'),
+          cs(G.violet, I.target, 'Buyer matching', 'Match each buyer to the listings that fit them best.'),
+          cs(G.blue, I.calendar, 'Viewing scheduler', 'Books and confirms viewings into agents\u2019 calendars.'),
+          cs(G.magenta, I.plane, 'Deal follow-ups', 'Timely nudges that keep deals from stalling.'),
+        ],
+        prodKicker: 'KONA CRM', prodIcon: I.home, prodTitle: 'Kona CRM for property teams',
+        prodBody: 'A pipeline that responds instantly, scores every lead, and books viewings — so your agents spend their time with buyers ready to move.',
+        prodHref: 'KonaCRM.dc.html', prodCta: 'Explore Kona CRM',
+        ctaA: 'Close more deals ', ctaB: 'with less chasing.', ctaSub: 'See the lead and viewing agents work a real pipeline.',
+      },
+      finance: {
+        name: 'Financial Services', tag: 'CLIENT GROWTH', grad: G.blue, icon: I.dollar,
+        glowA: 'radial-gradient(circle, rgba(31,63,207,.18), transparent 65%)', glowB: 'radial-gradient(circle, rgba(199,25,122,.13), transparent 65%)',
+        h1a: 'Deeper relationships, ', h1b: 'at scale.',
+        sub: 'Agents automate onboarding, surface the next best offer, and keep client relationships warm — growing wallet share without growing the team.',
+        panelLabel: 'CLIENT DESK · LIVE',
+        stats: [{ v: '+22%', l: 'CROSS-SELL' }, { v: '−50%', l: 'ONBOARDING TIME' }, { v: '92%', l: 'FORECAST ACCURACY' }, { v: '24/7', l: 'CLIENT RESPONSE' }],
+        challengeH: 'Relationships scale slowly. Opportunities don\u2019t wait.',
+        challengeP: 'Advisors can only stay close to so many clients, and cross-sell moments pass unnoticed while onboarding drags. KDigital\u2019s agents automate the paperwork, watch for the right moment to reach out, and keep every relationship warm — all inside a governed, auditable trust layer built for regulated work.',
+        useH1: 'Growth work, ', useH2: 'automated.', useSub: 'Agents handle onboarding and outreach so advisors focus on advice.',
+        cases: [
+          cs(G.blue, I.doc, 'Onboarding automation', 'KYC and paperwork handled, so clients start faster.'),
+          cs(G.violet, I.target, 'Next-best-offer', 'Surface cross-sell moments grounded in client data.'),
+          cs(G.magenta, I.bell, 'Relationship nudges', 'Proactive, timely outreach that keeps clients close.'),
+          cs(G.ochre, I.shield, 'Governed & auditable', 'Every action permissioned, logged, and compliant.'),
+        ],
+        prodKicker: 'KONA CRM', prodIcon: I.dollar, prodTitle: 'Kona CRM for client teams',
+        prodBody: 'Unify client data, automate onboarding, and let agents surface the right offer at the right time — with governance regulated firms require.',
+        prodHref: 'KonaCRM.dc.html', prodCta: 'Explore Kona CRM',
+        ctaA: 'Grow wallet share ', ctaB: 'with confidence.', ctaSub: 'See client-growth agents work inside a governed trust layer.',
+      },
+      government: {
+        name: 'Government', tag: 'CITIZEN SERVICES', grad: G.violet, icon: I.gov,
+        glowA: 'radial-gradient(circle, rgba(107,31,184,.18), transparent 65%)', glowB: 'radial-gradient(circle, rgba(31,63,207,.13), transparent 65%)',
+        h1a: 'Responsive services, ', h1b: 'for every citizen.',
+        sub: 'Agents answer enquiries in any language, route requests to the right desk, and clear backlogs — making public services faster and more accessible.',
+        panelLabel: 'CITIZEN DESK · LIVE',
+        stats: [{ v: '24/7', l: 'CITIZEN SUPPORT' }, { v: '−45%', l: 'RESOLUTION TIME' }, { v: '12+', l: 'LANGUAGES' }, { v: '−60%', l: 'BACKLOG' }],
+        challengeH: 'Demand is high. Channels are overwhelmed.',
+        challengeP: 'Citizens wait days for answers while staff work through backlogs across phone, email, and counters. KDigital\u2019s agents provide instant, multilingual support, route each request to the right department, and keep citizens updated — all governed, auditable, and accessible across channels.',
+        useH1: 'Citizen services, ', useH2: 'always on.', useSub: 'Agents handle the volume so staff can focus on complex cases.',
+        cases: [
+          cs(G.violet, I.globe, 'Multilingual chat', 'Instant answers in a citizen\u2019s own language, any hour.'),
+          cs(G.blue, I.route, 'Request routing', 'Every request sent to the right desk with status tracking.'),
+          cs(G.magenta, I.search, 'Backlog reduction', 'Clear routine cases automatically, surface the rest.'),
+          cs(G.ochre, I.shield, 'Secure & auditable', 'Data residency, access control, and full audit trails.'),
+        ],
+        prodKicker: 'AGENT OS', prodIcon: I.sparkle, prodTitle: 'Built on a governed Agent OS',
+        prodBody: 'Public-sector deployments run inside a trust layer with data residency, permissioned access, and complete auditability by default.',
+        prodHref: 'Security.dc.html', prodCta: 'See our security',
+        ctaA: 'Serve citizens ', ctaB: 'faster.', ctaSub: 'See citizen-service agents handle real enquiries in a walkthrough.',
+      },
+    };
+
+    const order = ['education', 'healthcare', 'retail', 'realestate', 'finance', 'government'];
+    let slug = 'education';
+    try { const q = new URLSearchParams(window.location.search).get('ind'); if (q && DB[q.toLowerCase()]) slug = q.toLowerCase(); } catch (e) {}
+    const d = DB[slug];
+
+    const dd = { ...d, iconEl: raw(ic(d.icon, 22), 'flex'), prodIconEl: raw(ic(d.prodIcon, 28), 'flex') };
+    dd.cases = d.cases.map(c => ({ ...c, iconEl: raw(ic(c.icon, 22), 'flex') }));
+    dd.stats = d.stats.map((s, i) => ({ ...s, ...(i % 2 ? warm : soft) }));
+
+    const others = order.filter(s => s !== slug).map(s => ({
+      name: DB[s].name, grad: DB[s].grad, href: 'Industry.dc.html?ind=' + s, iconEl: raw(ic(DB[s].icon, 16), 'flex'),
+    }));
+
+    return { d: dd, others };
+  }
+}
+</script>
+</body>
+</html>

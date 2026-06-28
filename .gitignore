@@ -1,0 +1,16 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Logs / deps (none required for this static site, but safe defaults)
+node_modules/
+npm-debug.log*
+.vercel
+
+# Local build artifacts
+_archive/
+screenshots/
+.thumbnail

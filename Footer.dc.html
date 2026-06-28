@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+</helmet>
+<footer style="position:relative; background:var(--ink); color:#fff; overflow:hidden;">
+  <div style="position:absolute; top:-120px; right:-80px; width:520px; height:520px; border-radius:50%; background:var(--grad); filter:blur(140px); opacity:.30; pointer-events:none;"></div>
+  <div style="position:relative; max-width:1160px; margin:0 auto; padding:80px 32px 36px;">
+    <div style="display:grid; grid-template-columns:1.6fr 1fr 1fr 1fr; gap:48px; padding-bottom:56px; border-bottom:1px solid rgba(255,255,255,.10);">
+      <div>
+        <div style="display:flex; align-items:center; gap:11px; margin-bottom:18px;">
+          <img src="uploads/logo.webp" alt="KDigital" style="height:30px; width:auto; display:block; filter:brightness(0) invert(1);">
+        </div>
+        <p style="color:rgba(255,255,255,.62); font-size:14px; line-height:1.65; max-width:320px; margin:0 0 22px;">Custom AI applications that modernize how mid-market businesses sell, learn, and operate — built, deployed, and run for you.</p>
+        <div style="display:flex; gap:10px;">
+          <sc-for list="{{ socials }}" as="s" hint-placeholder-count="3">
+            <a href="#" style="width:38px; height:38px; border-radius:10px; border:1px solid rgba(255,255,255,.14); display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,.7); transition:all .15s var(--ease);" style-hover="background:rgba(255,255,255,.08); color:#fff;">{{ s.svgEl }}</a>
+          </sc-for>
+        </div>
+      </div>
+      <sc-for list="{{ cols }}" as="col" hint-placeholder-count="3">
+        <div>
+          <div class="mono" style="font-size:10.5px; color:rgba(255,255,255,.45); margin-bottom:18px; letter-spacing:.14em;">{{ col.title }}</div>
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ it.href }}" style="color:rgba(255,255,255,.72); font-size:13.5px; font-family:var(--font-ui); text-decoration:none; transition:color .15s var(--ease);" style-hover="color:#fff;">{{ it.label }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <div style="display:flex; justify-content:space-between; align-items:center; padding-top:28px; flex-wrap:wrap; gap:16px;">
+      <div class="mono" style="font-size:11px; color:rgba(255,255,255,.4); letter-spacing:.08em;">© 2026 KDIGITAL TECHNOLOGIES · HYDERABAD · BENGALURU · ATLANTA</div>
+      <div style="display:flex; gap:22px;">
+        <a href="Privacy.dc.html" style="color:rgba(255,255,255,.5); font-size:12.5px; text-decoration:none;" style-hover="color:#fff;">Privacy</a>
+        <a href="Terms.dc.html" style="color:rgba(255,255,255,.5); font-size:12.5px; text-decoration:none;" style-hover="color:#fff;">Terms</a>
+        <a href="Security.dc.html" style="color:rgba(255,255,255,.5); font-size:12.5px; text-decoration:none;" style-hover="color:#fff;">Security</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1160,&quot;height&quot;:380}}">
+class Component extends DCLogic {
+  renderVals() {
+    const cols = [
+      { title: 'PLATFORM', items: [
+        { label: 'Kona CRM', href: 'KonaCRM.dc.html' },
+        { label: 'Kona LMS', href: 'KonaLMS.dc.html' },
+        { label: 'Commerce AI', href: 'CommerceAI.dc.html' },
+        { label: 'Agent OS', href: 'Platform.dc.html' },
+      ]},
+      { title: 'SOLUTIONS', items: [
+        { label: 'Education', href: 'Solutions.dc.html' },
+        { label: 'Healthcare', href: 'Solutions.dc.html' },
+        { label: 'Real Estate', href: 'Solutions.dc.html' },
+        { label: 'Financial Services', href: 'Solutions.dc.html' },
+      ]},
+      { title: 'COMPANY', items: [
+        { label: 'Services', href: 'Services.dc.html' },
+        { label: 'Resources', href: 'Resources.dc.html' },
+        { label: 'About', href: 'Company.dc.html' },
+        { label: 'Careers', href: 'Company.dc.html' },
+        { label: 'Contact', href: 'Contact.dc.html' },
+        { label: 'Book a demo', href: 'Contact.dc.html' },
+      ]},
+    ];
+    const socials = [
+      { svg: '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zM8.34 17V10.2H6.1V17zM7.22 9.24a1.3 1.3 0 1 0 0-2.6 1.3 1.3 0 0 0 0 2.6zM18 17v-3.73c0-2-.43-3.53-2.76-3.53a2.42 2.42 0 0 0-2.18 1.2h-.03V10.2H10.9V17h2.24v-3.36c0-.89.17-1.75 1.27-1.75s1.1 1.02 1.1 1.81V17z"/></svg>' },
+      { svg: '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M22 5.8a8.2 8.2 0 0 1-2.36.65 4.1 4.1 0 0 0 1.8-2.27 8.2 8.2 0 0 1-2.6 1A4.1 4.1 0 0 0 11.5 8.9a11.6 11.6 0 0 1-8.4-4.26 4.1 4.1 0 0 0 1.27 5.47A4 4 0 0 1 2.5 9.6v.05a4.1 4.1 0 0 0 3.3 4 4.1 4.1 0 0 1-1.85.07 4.1 4.1 0 0 0 3.83 2.85A8.23 8.23 0 0 1 2 18.28a11.6 11.6 0 0 0 6.29 1.84c7.55 0 11.67-6.25 11.67-11.67l-.01-.53A8.3 8.3 0 0 0 22 5.8z"/></svg>' },
+      { svg: '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.57 2.36 1.12 2.94.86.09-.67.35-1.12.63-1.38-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>' },
+    ];
+    const raw = (html) => React.createElement('span', { style: { display: 'contents' }, dangerouslySetInnerHTML: { __html: html } });
+    socials.forEach(s => s.svgEl = raw(s.svg));
+    return { cols, socials };
+  }
+}
+</script>
+</body>
+</html>

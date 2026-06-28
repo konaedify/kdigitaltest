@@ -1,0 +1,40 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/Home.dc.html" },
+    { "source": "/platform", "destination": "/Platform.dc.html" },
+    { "source": "/workflows", "destination": "/Workflows.dc.html" },
+    { "source": "/integrations", "destination": "/Integrations.dc.html" },
+    { "source": "/security", "destination": "/Security.dc.html" },
+    { "source": "/products/kona-crm", "destination": "/KonaCRM.dc.html" },
+    { "source": "/products/kona-lms", "destination": "/KonaLMS.dc.html" },
+    { "source": "/products/commerce-ai", "destination": "/CommerceAI.dc.html" },
+    { "source": "/solutions", "destination": "/Solutions.dc.html" },
+    { "source": "/solutions/education", "destination": "/Industry.dc.html?ind=education" },
+    { "source": "/solutions/healthcare", "destination": "/Industry.dc.html?ind=healthcare" },
+    { "source": "/solutions/retail", "destination": "/Industry.dc.html?ind=retail" },
+    { "source": "/solutions/realestate", "destination": "/Industry.dc.html?ind=realestate" },
+    { "source": "/solutions/finance", "destination": "/Industry.dc.html?ind=finance" },
+    { "source": "/solutions/government", "destination": "/Industry.dc.html?ind=government" },
+    { "source": "/services", "destination": "/Services.dc.html" },
+    { "source": "/services/salesforce", "destination": "/Salesforce.dc.html" },
+    { "source": "/services/servicenow", "destination": "/ServiceNow.dc.html" },
+    { "source": "/services/marketing", "destination": "/Marketing.dc.html" },
+    { "source": "/resources", "destination": "/Resources.dc.html" },
+    { "source": "/resources/customer-stories", "destination": "/CustomerStories.dc.html" },
+    { "source": "/company", "destination": "/Company.dc.html" },
+    { "source": "/contact", "destination": "/Contact.dc.html" },
+    { "source": "/privacy", "destination": "/Privacy.dc.html" },
+    { "source": "/terms", "destination": "/Terms.dc.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)\\.(png|jpg|jpeg|webp|svg|woff2|js|css)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

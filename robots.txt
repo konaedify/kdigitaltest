@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block utility/legal noise from heavy crawl if desired (kept open here)
+Disallow: /_archive/
+
+Sitemap: https://www.kdigital.ai/sitemap.xml

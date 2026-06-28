@@ -1,0 +1,184 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/edify-crm/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Instrument Serif|Inter Tight|JetBrains Mono))/i]",
+        "message": "Font not provided by the design system. Available: Instrument Serif, Inter Tight, JetBrains Mono."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--amber",
+      "--blue",
+      "--canvas",
+      "--dur",
+      "--dur-fast",
+      "--dur-slow",
+      "--ease",
+      "--font-display",
+      "--font-mono",
+      "--font-ui",
+      "--g-blue",
+      "--g-magenta",
+      "--g-ochre",
+      "--g-violet",
+      "--grad",
+      "--grad-glow",
+      "--grad-soft",
+      "--hint",
+      "--ink",
+      "--ink2",
+      "--magenta",
+      "--mute",
+      "--ochre",
+      "--ok",
+      "--paper",
+      "--r-2xl",
+      "--r-lg",
+      "--r-md",
+      "--r-pill",
+      "--r-sm",
+      "--r-xl",
+      "--r-xs",
+      "--rule",
+      "--rule2",
+      "--sh-brand",
+      "--sh-card",
+      "--sh-hover",
+      "--sh-pop",
+      "--sh-sm",
+      "--sp-1",
+      "--sp-10",
+      "--sp-12",
+      "--sp-2",
+      "--sp-3",
+      "--sp-4",
+      "--sp-5",
+      "--sp-6",
+      "--sp-8",
+      "--t-body",
+      "--t-display",
+      "--t-h1",
+      "--t-h2",
+      "--t-h3",
+      "--t-label",
+      "--t-sm",
+      "--t-xs",
+      "--violet",
+      "--warm",
+      "--warm2",
+      "--warn"
+    ],
+    "tokenKinds": {
+      "--ink": "color",
+      "--ink2": "color",
+      "--mute": "color",
+      "--hint": "color",
+      "--paper": "color",
+      "--canvas": "color",
+      "--warm": "color",
+      "--warm2": "color",
+      "--rule": "color",
+      "--rule2": "color",
+      "--blue": "color",
+      "--violet": "color",
+      "--magenta": "color",
+      "--ochre": "color",
+      "--ok": "color",
+      "--warn": "color",
+      "--amber": "color",
+      "--grad": "other",
+      "--grad-soft": "other",
+      "--grad-glow": "other",
+      "--g-blue": "other",
+      "--g-violet": "other",
+      "--g-magenta": "other",
+      "--g-ochre": "other",
+      "--font-display": "font",
+      "--font-ui": "font",
+      "--font-mono": "font",
+      "--t-display": "spacing",
+      "--t-h1": "spacing",
+      "--t-h2": "spacing",
+      "--t-h3": "spacing",
+      "--t-body": "spacing",
+      "--t-sm": "spacing",
+      "--t-xs": "spacing",
+      "--t-label": "spacing",
+      "--r-xs": "spacing",
+      "--r-sm": "spacing",
+      "--r-md": "spacing",
+      "--r-lg": "spacing",
+      "--r-xl": "spacing",
+      "--r-2xl": "spacing",
+      "--r-pill": "spacing",
+      "--sp-1": "spacing",
+      "--sp-2": "spacing",
+      "--sp-3": "spacing",
+      "--sp-4": "spacing",
+      "--sp-5": "spacing",
+      "--sp-6": "spacing",
+      "--sp-8": "spacing",
+      "--sp-10": "spacing",
+      "--sp-12": "spacing",
+      "--sh-sm": "shadow",
+      "--sh-card": "shadow",
+      "--sh-hover": "shadow",
+      "--sh-pop": "shadow",
+      "--sh-brand": "shadow",
+      "--ease": "other",
+      "--dur-fast": "other",
+      "--dur": "other",
+      "--dur-slow": "other"
+    },
+    "fontFamilies": [
+      "Instrument Serif",
+      "Inter Tight",
+      "JetBrains Mono"
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Contact — Book a demo | KDigital</title>
+  <meta name="description" content="Book a demo or talk to KDigital’s team about custom AI agents, staffing, and implementation.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0A14">
+  <link rel="canonical" href="https://www.kdigital.ai/contact">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KDigital">
+  <meta property="og:title" content="Contact — Book a demo | KDigital">
+  <meta property="og:description" content="Book a demo or talk to KDigital’s team about custom AI agents, staffing, and implementation.">
+  <meta property="og:url" content="https://www.kdigital.ai/contact">
+  <meta property="og:image" content="https://www.kdigital.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact — Book a demo | KDigital">
+  <meta name="twitter:description" content="Book a demo or talk to KDigital’s team about custom AI agents, staffing, and implementation.">
+  <meta name="twitter:image" content="https://www.kdigital.ai/og-image.png">
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes auroraA { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(50px,30px) scale(1.12); } }
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-40px,20px) scale(1.1); } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+    @keyframes popIn { from { opacity:0; transform:scale(.92); } to { opacity:1; transform:scale(1); } }
+    @supports (animation-timeline: view()) {
+      [data-reveal] { animation:revealKf .9s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 70%; }
+    }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+    .ce-input { width:100%; box-sizing:border-box; font-family:var(--font-ui); font-size:14px; color:var(--ink); background:var(--warm); border:1px solid var(--rule); border-radius:11px; padding:13px 14px; outline:none; transition:border-color .15s var(--ease), box-shadow .15s var(--ease); }
+    .ce-input:focus { border-color:var(--violet); box-shadow:0 0 0 3px rgba(107,31,184,.12); background:#fff; }
+    .ce-input::placeholder { color:var(--hint); }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden; min-height:100vh;">
+  <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.04) 1px, transparent 1px); background-size:24px 24px; -webkit-mask-image:radial-gradient(ellipse at 50% 20%, #000 35%, transparent 80%); mask-image:radial-gradient(ellipse at 50% 20%, #000 35%, transparent 80%);"></div>
+  <div style="position:absolute; top:-120px; right:6%; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle, rgba(199,25,122,.16), transparent 65%); filter:blur(60px); animation:auroraB 19s ease-in-out infinite;"></div>
+  <div style="position:absolute; top:120px; left:2%; width:440px; height:440px; border-radius:50%; background:radial-gradient(circle, rgba(31,63,207,.14), transparent 65%); filter:blur(60px); animation:auroraA 21s ease-in-out infinite;"></div>
+
+  <section style="position:relative; z-index:2; max-width:1120px; margin:0 auto; padding:150px 32px 90px; display:grid; grid-template-columns:1fr 1.05fr; gap:60px; align-items:start;">
+    <!-- LEFT -->
+    <div data-reveal style="padding-top:8px;">
+      <span class="eyebrow">Let's connect</span>
+      <h1 style="font-size:50px; line-height:1.08; letter-spacing:-.015em; margin:18px 0 22px;">See your business, <span class="serif-i grad-text">run by agents.</span></h1>
+      <p style="font-size:17px; color:var(--ink2); line-height:1.6; margin:0 0 36px; max-width:440px;">Book a 30-minute demo. We'll map one of your workflows to an agent and show you the ROI — live, with your numbers.</p>
+      <div style="display:flex; flex-direction:column; gap:18px; margin-bottom:38px;">
+        <sc-for list="{{ expect }}" as="e" hint-placeholder-count="3">
+          <div style="display:flex; align-items:flex-start; gap:14px;">
+            <span style="flex-shrink:0; width:30px; height:30px; border-radius:9px; background:var(--grad-soft); border:1px solid rgba(107,31,184,.18); display:flex; align-items:center; justify-content:center;">{{ e.iconEl }}</span>
+            <div><div style="font-weight:700; font-size:14.5px; color:var(--ink);">{{ e.title }}</div><div style="font-size:13px; color:var(--ink2); line-height:1.5; margin-top:2px;">{{ e.body }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="display:flex; gap:28px; padding-top:24px; border-top:1px dashed var(--rule2); flex-wrap:wrap;">
+        <div><div class="mono" style="font-size:10px; color:var(--mute); letter-spacing:.12em; margin-bottom:6px;">CALL / WHATSAPP</div><div style="font-weight:700; font-size:15px; color:var(--ink);">+91 8977 736 843</div></div>
+        <div><div class="mono" style="font-size:10px; color:var(--mute); letter-spacing:.12em; margin-bottom:6px;">EMAIL</div><div style="font-weight:700; font-size:15px; color:var(--ink);">hello@kdigital.ai</div></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: FORM -->
+    <div data-reveal style="position:relative; background:var(--paper); border:1px solid var(--rule); border-radius:22px; padding:36px; box-shadow:0 24px 60px rgba(14,10,20,.10);">
+      <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+        <div style="text-align:center; padding:40px 12px; animation:popIn .4s var(--ease) both;">
+          <div style="width:68px; height:68px; border-radius:50%; background:var(--grad); display:flex; align-items:center; justify-content:center; margin:0 auto 22px; box-shadow:var(--sh-brand);"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></div>
+          <h2 style="font-family:var(--font-ui); font-weight:700; font-size:24px; margin:0 0 10px; color:var(--ink);">You're on the list.</h2>
+          <p style="font-size:15px; color:var(--ink2); line-height:1.6; max-width:340px; margin:0 auto;">Thanks, {{ nameOrThere }}. Our team will reach out within one business day to schedule your demo.</p>
+          <a href="Home.dc.html" style="display:inline-block; margin-top:24px; color:var(--violet); font-weight:700; font-size:14px; text-decoration:none;">← Back to home</a>
+        </div>
+      </sc-if>
+      <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <h2 style="font-family:var(--font-ui); font-weight:700; font-size:22px; margin:0 0 4px; color:var(--ink);">Book your demo</h2>
+          <p style="font-size:13.5px; color:var(--mute); margin:0 0 24px;">No commitment. Just a clear look at the ROI.</p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">FULL NAME *</label><input class="ce-input" placeholder="Manikanta R." value="{{ form.name }}" onInput="{{ onName }}"></div>
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">COMPANY *</label><input class="ce-input" placeholder="Acme Pvt Ltd" value="{{ form.company }}" onInput="{{ onCompany }}"></div>
+          </div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">EMAIL *</label><input class="ce-input" type="email" placeholder="you@company.com" value="{{ form.email }}" onInput="{{ onEmail }}"></div>
+            <div><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">PHONE *</label><input class="ce-input" placeholder="+91 ..." value="{{ form.phone }}" onInput="{{ onPhone }}"></div>
+          </div>
+          <div style="margin-bottom:14px;"><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">INTERESTED IN</label>
+            <select class="ce-input" value="{{ form.service }}" onChange="{{ onService }}">
+              <option value="Agentic CRM">Agentic CRM</option>
+              <option value="Adaptive LMS">Adaptive LMS</option>
+              <option value="Commerce AI">Commerce AI</option>
+              <option value="Marketing">AI Marketing</option>
+              <option value="Web & App Development">Web &amp; App Development</option>
+              <option value="Salesforce">Salesforce</option>
+              <option value="Not sure yet">Not sure yet — help me decide</option>
+            </select>
+          </div>
+          <div style="margin-bottom:20px;"><label class="mono" style="display:block; font-size:10px; color:var(--mute); letter-spacing:.1em; margin-bottom:7px;">WHAT WOULD YOU AUTOMATE FIRST?</label><textarea class="ce-input" rows="3" placeholder="e.g. follow-ups for inbound leads..." style="resize:vertical;" value="{{ form.message }}" onInput="{{ onMessage }}"></textarea></div>
+          <sc-if value="{{ showError }}" hint-placeholder-val="{{ false }}">
+            <div style="font-size:12.5px; color:var(--warn); margin-bottom:14px; font-weight:500;">Please fill in your name, company, email and phone.</div>
+          </sc-if>
+          <button onClick="{{ onSubmit }}" style="width:100%; display:inline-flex; align-items:center; justify-content:center; gap:9px; background:var(--grad); color:#fff; font-family:var(--font-ui); font-weight:700; font-size:15px; padding:15px; border:none; border-radius:99px; cursor:pointer; box-shadow:var(--sh-brand); transition:transform .15s var(--ease);" style-hover="transform:translateY(-1px);">Request my demo <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+          <p style="font-size:11.5px; color:var(--hint); text-align:center; margin:14px 0 0;">By submitting you agree to be contacted about KDigital products.</p>
+        </div>
+      </sc-if>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="contact" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1120,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = { form: { name: '', company: '', email: '', phone: '', service: 'Agentic CRM', message: '' }, submitted: false, showError: false };
+  set(k, v) { this.setState(s => ({ form: { ...s.form, [k]: v } })); }
+  submit() {
+    const f = this.state.form;
+    if (!f.name.trim() || !f.company.trim() || !f.email.trim() || !f.phone.trim()) {
+      this.setState({ showError: true });
+      return;
+    }
+    this.setState({ submitted: true, showError: false });
+  }
+  renderVals() {
+    const raw = (html) => React.createElement('span', { style: { display: 'contents' }, dangerouslySetInnerHTML: { __html: html } });
+    const ic = (p) => `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+    const expect = [
+      { title: 'A workflow mapped live', body: 'We take one real process and show the agent that runs it.', icon: ic('<path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>') },
+      { title: 'The ROI math, with your numbers', body: 'Time saved, pipeline recovered, payback period.', icon: ic('<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>') },
+      { title: 'A 6-week path to production', body: 'No vague roadmaps — a concrete plan to first agent.', icon: ic('<circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path>') },
+    ];
+    expect.forEach(e => e.iconEl = raw(e.icon));
+    return {
+      expect,
+      form: this.state.form,
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      showError: this.state.showError,
+      nameOrThere: this.state.form.name.trim() ? this.state.form.name.trim().split(' ')[0] : 'there',
+      onName: (e) => this.set('name', e.target.value),
+      onCompany: (e) => this.set('company', e.target.value),
+      onEmail: (e) => this.set('email', e.target.value),
+      onPhone: (e) => this.set('phone', e.target.value),
+      onService: (e) => this.set('service', e.target.value),
+      onMessage: (e) => this.set('message', e.target.value),
+      onSubmit: () => this.submit(),
+    };
+  }
+}
+</script>
+</body>
+</html>

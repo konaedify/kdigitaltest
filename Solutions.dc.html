@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Solutions by industry | KDigital</title>
+  <meta name="description" content="AI solutions tuned to your industry — education, healthcare, retail, real estate, financial services, and government.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E0A14">
+  <link rel="canonical" href="https://www.kdigital.ai/solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="KDigital">
+  <meta property="og:title" content="Solutions by industry | KDigital">
+  <meta property="og:description" content="AI solutions tuned to your industry — education, healthcare, retail, real estate, financial services, and government.">
+  <meta property="og:url" content="https://www.kdigital.ai/solutions">
+  <meta property="og:image" content="https://www.kdigital.ai/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Solutions by industry | KDigital">
+  <meta name="twitter:description" content="AI solutions tuned to your industry — education, healthcare, retail, real estate, financial services, and government.">
+  <meta name="twitter:image" content="https://www.kdigital.ai/og-image.png">
+  <link rel="stylesheet" href="_ds/digital-edify-design-system-e66b7711-7eb9-41ed-a0b9-cbe63bf2e937/colors_and_type.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    @keyframes auroraA { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(50px,30px) scale(1.12); } }
+    @keyframes auroraB { 0%,100% { transform:translate(0,0) scale(1); } 50% { transform:translate(-40px,20px) scale(1.1); } }
+    @keyframes revealKf { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:none; } }
+    @supports (animation-timeline: view()) {
+      [data-reveal] { animation:revealKf .9s var(--ease) both; animation-timeline:view(); animation-range:entry 0% entry 62%; }
+    }
+    @media (prefers-reduced-motion: reduce) { [data-reveal] { animation:none !important; opacity:1 !important; transform:none !important; } }
+    body { overflow-x:hidden; }
+  </style>
+</helmet>
+<div style="position:relative; background:var(--canvas); color:var(--ink); overflow:hidden;">
+
+  <!-- HERO -->
+  <section style="position:relative; padding:160px 32px 70px; overflow:hidden;">
+    <div style="position:absolute; inset:0; z-index:0; background-image:radial-gradient(rgba(14,10,20,.045) 1px, transparent 1px); background-size:24px 24px; -webkit-mask-image:radial-gradient(ellipse at 50% 30%, #000 35%, transparent 78%); mask-image:radial-gradient(ellipse at 50% 30%, #000 35%, transparent 78%);"></div>
+    <div style="position:absolute; top:-130px; right:6%; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(199,25,122,.18), transparent 65%); filter:blur(60px); animation:auroraB 19s ease-in-out infinite;"></div>
+    <div style="position:relative; z-index:2; max-width:860px; margin:0 auto; text-align:center;">
+      <span class="eyebrow" data-reveal style="justify-content:center;">Solutions by industry</span>
+      <h1 data-reveal style="font-size:58px; line-height:1.06; letter-spacing:-.015em; margin:18px 0 22px;">AI tuned to how <span class="serif-i grad-text">your world</span> works.</h1>
+      <p data-reveal style="font-size:19px; color:var(--ink2); line-height:1.6; max-width:600px; margin:0 auto;">The same agentic core, shaped to the language, workflows, and metrics of your industry — so it feels less like software and more like a teammate who already knows the business.</p>
+    </div>
+  </section>
+
+  <!-- INDUSTRY GRID -->
+  <section style="padding:40px 32px 90px;">
+    <div style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:repeat(2,1fr); gap:22px;">
+      <sc-for list="{{ industries }}" as="ind" hint-placeholder-count="6">
+        <a href="{{ ind.href }}" data-reveal style="position:relative; background:var(--paper); border:1px solid var(--rule); border-radius:20px; padding:34px; overflow:hidden; box-shadow:var(--sh-card); text-decoration:none; display:block; transition:transform .18s var(--ease), box-shadow .18s var(--ease);" style-hover="transform:translateY(-4px); box-shadow:var(--sh-hover);">
+          <div style="display:flex; align-items:center; gap:14px; margin-bottom:18px;">
+            <span style="width:48px; height:48px; border-radius:13px; background:{{ ind.grad }}; display:flex; align-items:center; justify-content:center; color:#fff;">{{ ind.iconEl }}</span>
+            <div>
+              <h3 style="font-family:var(--font-ui); font-weight:700; font-size:21px; margin:0; color:var(--ink);">{{ ind.title }}</h3>
+              <div class="mono" style="font-size:10px; color:var(--violet); letter-spacing:.12em; margin-top:4px;">{{ ind.tag }}</div>
+            </div>
+          </div>
+          <p style="font-size:14.5px; color:var(--ink2); line-height:1.6; margin:0 0 20px;">{{ ind.body }}</p>
+          <div style="display:flex; flex-direction:column; gap:10px; margin-bottom:22px;">
+            <sc-for list="{{ ind.uses }}" as="u" hint-placeholder-count="3">
+              <div style="display:flex; align-items:flex-start; gap:10px;"><span style="flex-shrink:0; width:18px; height:18px; margin-top:1px; border-radius:50%; background:var(--grad-soft); display:flex; align-items:center; justify-content:center;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--violet)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span><span style="font-size:13.5px; font-weight:500; line-height:1.4; color:var(--ink2);">{{ u }}</span></div>
+            </sc-for>
+          </div>
+          <div style="display:flex; align-items:center; gap:24px; padding-top:18px; border-top:1px dashed var(--rule2);">
+            <div><div class="serif grad-text" style="font-size:26px; line-height:1;">{{ ind.stat1v }}</div><div class="mono" style="font-size:9px; color:var(--mute); margin-top:4px; letter-spacing:.08em;">{{ ind.stat1l }}</div></div>
+            <div><div class="serif grad-text" style="font-size:26px; line-height:1;">{{ ind.stat2v }}</div><div class="mono" style="font-size:9px; color:var(--mute); margin-top:4px; letter-spacing:.08em;">{{ ind.stat2l }}</div></div>
+            <span style="margin-left:auto; display:inline-flex; align-items:center; gap:6px; font-family:var(--font-ui); font-weight:700; font-size:13px; color:var(--violet);">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+          </div>
+        </a>
+      </sc-for>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHT -->
+  <section style="background:var(--warm); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule); padding:96px 32px;">
+    <div style="max-width:1100px; margin:0 auto;">
+      <div data-reveal style="text-align:center; margin-bottom:54px;">
+        <span class="eyebrow" style="justify-content:center;">A typical rollout</span>
+        <h2 class="serif" style="font-size:38px; margin:16px 0 0; line-height:1.1;">From kickoff to first agent in <span class="serif-i grad-text">six weeks.</span></h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="4">
+          <div data-reveal style="position:relative; padding:0 18px;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;"><span style="width:34px; height:34px; border-radius:50%; background:var(--grad); color:#fff; display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:13px; font-weight:600; flex-shrink:0;">{{ st.n }}</span><span class="mono" style="font-size:10px; color:var(--mute); letter-spacing:.1em;">{{ st.wk }}</span></div>
+            <h3 style="font-family:var(--font-ui); font-weight:700; font-size:16px; margin:0 0 8px; color:var(--ink);">{{ st.title }}</h3>
+            <p style="font-size:13px; color:var(--ink2); line-height:1.55; margin:0;">{{ st.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:90px 32px;">
+    <div data-reveal style="position:relative; max-width:1160px; margin:0 auto; background:var(--ink); border-radius:28px; padding:76px 56px; overflow:hidden; text-align:center;">
+      <div style="position:absolute; top:-120px; left:50%; transform:translateX(-50%); width:680px; height:420px; background:var(--grad); filter:blur(120px); opacity:.4;"></div>
+      <div style="position:relative;">
+        <h2 class="serif" style="font-size:46px; color:#fff; line-height:1.05; margin:0 0 18px;">Not sure where to start? <span class="serif-i" style="background:linear-gradient(120deg,#7da0ff,#ff8fd0); -webkit-background-clip:text; background-clip:text; color:transparent;">We'll map it.</span></h2>
+        <p style="font-size:17px; color:rgba(255,255,255,.7); max-width:480px; margin:0 auto 32px; line-height:1.6;">Tell us your industry and your biggest bottleneck. We'll show you the agent that fixes it.</p>
+        <a href="Contact.dc.html" style="background:#fff; color:var(--ink); font-weight:700; font-size:15px; padding:15px 30px; border-radius:99px; text-decoration:none;">Talk to our team</a>
+      </div>
+    </div>
+  </section>
+
+  <dc-import name="Footer" hint-size="100%,420px"></dc-import>
+</div>
+<dc-import name="Nav" active="solutions" hint-size="100%,90px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    const raw = (html) => React.createElement('span', { style: { display: 'contents' }, dangerouslySetInnerHTML: { __html: html } });
+    const ic = (p) => `<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+
+    const industries = [
+      { title: 'Education', tag: 'COHORTS · ADMISSIONS', grad: 'var(--g-blue)', href: 'Industry.dc.html?ind=education',
+        icon: ic('<path d="M22 10L12 5 2 10l10 5 10-5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path>'),
+        body: 'Fill cohorts and keep learners on track. Agents manage admissions pipelines, personalize learning, and flag at-risk enrolments before they slip.',
+        uses: ['Lead-to-enrolment automation','Adaptive learning paths','At-risk learner alerts'],
+        stat1v: '3.2×', stat1l: 'FASTER ENROLMENT', stat2v: '−28%', stat2l: 'DROP-OFF' },
+      { title: 'Healthcare', tag: 'PATIENT ENGAGEMENT', grad: 'var(--g-magenta)', href: 'Industry.dc.html?ind=healthcare',
+        icon: ic('<path d="M12 21s-8-4.5-8-11a4 4 0 0 1 8-1 4 4 0 0 1 8 1c0 6.5-8 11-8 11z"></path>'),
+        body: 'Intelligent patient engagement and operations. Automate reminders, intake, and follow-ups while staff focus on care, not coordination.',
+        uses: ['Automated appointment reminders','Smart intake & triage routing','Follow-up & adherence nudges'],
+        stat1v: '−40%', stat1l: 'NO-SHOWS', stat2v: '24/7', stat2l: 'PATIENT RESPONSE' },
+      { title: 'Retail & E-Commerce', tag: 'CONVERSION · LOYALTY', grad: 'var(--g-violet)', href: 'Industry.dc.html?ind=retail',
+        icon: ic('<circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"></path>'),
+        body: 'Personalized engagement that drives sales. Recommendations, automated inventory, and lifecycle journeys that recover carts and grow basket size.',
+        uses: ['Personalized recommendations','Cart-recovery automation','Inventory & restock agents'],
+        stat1v: '+27%', stat1l: 'CONVERSION', stat2v: '312', stat2l: 'CARTS / DAY RECOVERED' },
+      { title: 'Real Estate', tag: 'LEADS · BUYER INSIGHT', grad: 'var(--g-ochre)', href: 'Industry.dc.html?ind=realestate',
+        icon: ic('<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><path d="M9 22V12h6v10"></path>'),
+        body: 'Boost sales with intelligent lead management. Agents qualify enquiries, match buyers to listings, and keep deals moving with timely nudges.',
+        uses: ['Enquiry qualification & routing','Buyer-to-listing matching','Deal-stage follow-ups'],
+        stat1v: '2.6×', stat1l: 'QUALIFIED LEADS', stat2v: '−35%', stat2l: 'TIME TO CLOSE' },
+      { title: 'Financial Services', tag: 'CLIENT GROWTH', grad: 'var(--g-blue)', href: 'Industry.dc.html?ind=finance',
+        icon: ic('<line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>'),
+        body: 'Enhance client engagement and drive growth. Agents surface cross-sell moments, automate onboarding, and keep relationships warm at scale.',
+        uses: ['Onboarding automation','Next-best-offer surfacing','Proactive relationship nudges'],
+        stat1v: '+22%', stat1l: 'CROSS-SELL', stat2v: '−50%', stat2l: 'ONBOARDING TIME' },
+      { title: 'Government', tag: 'CITIZEN SERVICES', grad: 'var(--g-violet)', href: 'Industry.dc.html?ind=government',
+        icon: ic('<path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6"></path>'),
+        body: 'Transform services with AI-powered citizen engagement. Automate enquiries, route requests, and deliver responsive support across channels.',
+        uses: ['Multilingual citizen chat','Request routing & status','Service backlog reduction'],
+        stat1v: '24/7', stat1l: 'CITIZEN SUPPORT', stat2v: '−45%', stat2l: 'RESOLUTION TIME' },
+    ];
+    industries.forEach(i => i.iconEl = raw(i.icon));
+
+    const steps = [
+      { n: '1', wk: 'WEEK 1', title: 'Map the workflow', body: 'We sit with your team, pick the highest-leverage workflow, and define what good looks like.' },
+      { n: '2', wk: 'WEEK 2–3', title: 'Connect & configure', body: 'We wire up your systems, set guardrails, and shape the agent to your data and tone.' },
+      { n: '3', wk: 'WEEK 4–5', title: 'Pilot with a human loop', body: 'The agent runs alongside your team, suggesting actions you approve while it learns.' },
+      { n: '4', wk: 'WEEK 6', title: 'Go live & expand', body: 'Promote to production, measure the lift, and line up the next workflow to automate.' },
+    ];
+
+    return { industries, steps };
+  }
+}
+</script>
+</body>
+</html>
